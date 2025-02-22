@@ -1,0 +1,25 @@
+#mainHeader {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+#mainHeaderItem1 {
+  /* border: 1px solid rgb(198, 9, 154); */
+}
+#mainHeaderItem2 {
+  flex-grow: 1;
+  /* border: 1px solid rgb(198, 192, 9); */
+  flex-shrink: 1;
+  text-align: end;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+

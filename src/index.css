@@ -1,0 +1,55 @@
+:root {
+  --bg-color-primary: #0a192f;
+  --bg-color-secondary: "";
+  --font-primary: "Inter", serif;
+  --font-secondary: "Montserrat", serif;
+  --font-weight: 600;
+  --font-size-body: 16px;
+  --font-size-heading: "";
+  --font-size-subheading: "";
+  --font-size-paragraph: "";
+  --color-text-secondary: #ccd6f6;
+  --color-text-primary: #8892b0;
+  --color-text-highligth: #64ffda;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-size: var(--font-size-body);
+  background-color: var(--bg-color-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight);
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  /* border: 1px solid rgb(12, 224, 12); */
+  margin: 0;
+  padding: 0;
+  counter-reset: list-counter;
+}
+ul li {
+  display: inline-block;
+  /* border: 1px solid rgb(62, 12, 224); */
+  counter-increment: list-counter;
+}
+
+ul li a::before {
+  content: counter(list-counter) ". ";
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  /* border: 1px solid rgb(224, 12, 12); */
+  padding: 32px 16px;
+  font-weight: normal;
+}
