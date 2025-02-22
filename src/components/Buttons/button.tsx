@@ -3,7 +3,7 @@ import buttonStyles from "./button.module.css";
 const Button = () => {
   return (
     <React.Fragment>
-      <button className={buttonStyles.check}>Button</button>
+      <button className={buttonStyles.btn}>Resume</button>
     </React.Fragment>
   );
 };

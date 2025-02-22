@@ -1,5 +1,5 @@
 #mainHeader {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,11 +15,94 @@
   flex-shrink: 1;
   text-align: end;
 }
+#menuIcon,
+#closeIcon {
+  display: none;
+}
 
-.logo {
+#mainHeaderItem1 figure img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
 
+#mainHeaderItem2 nav ul {
+  list-style-type: none;
+  /* border: 1px solid rgb(12, 224, 12); */
+  margin: 0;
+  padding: 0;
+  counter-reset: list-counter;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  font-weight: var(--font-weight);
+}
+#mainHeaderItem2 nav ul li {
+  display: inline-block;
+  /* border: 1px solid rgb(62, 12, 224); */
+  counter-increment: list-counter;
+}
 
+#mainHeaderItem2 nav ul li a::before {
+  content: "0" counter(list-counter) ". ";
+  font-weight: bold;
+  margin-right: 5px;
+  color: var(--color-text-highligth);
+}
+
+#mainHeaderItem2 nav ul li a {
+  display: block;
+  text-decoration: none;
+  /* border: 1px solid rgb(224, 12, 12); */
+  padding: 32px 16px;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  #mainHeader {
+    justify-content: space-between;
+  }
+  #mainHeaderItem1 figure img {
+    margin-top: 5px;
+  }
+  #mainHeaderItem2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    text-align: start;
+    background-color: rgb(5, 5, 5, 0.5);
+  }
+  #mainHeaderItem2.active {
+    display: block;
+  }
+  #mainHeaderItem2 nav {
+    background-color: var(--bg-color-primary);
+    width: 70%;
+    height: 100%;
+    /* border: 1px solid rgb(58, 224, 12); */
+  }
+  #mainHeaderItem2 nav ul {
+    text-align: center;
+  }
+  #mainHeaderItem2 nav ul li {
+    display: block;
+  }
+
+  #mainHeaderItem2 nav ul li a::before {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  #menuIcon,
+  #closeIcon {
+    display: block;
+    /* border: 1px solid rgb(198, 192, 9); */
+    font-size: 25px;
+    color: var(--color-text-highligth);
+    cursor: pointer;
+    z-index: 1000;
+  }
+}

@@ -1,48 +1,66 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { logo, defaultLogo } from "../../assets";
 import headerStyles from "./header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import Button from "../Buttons/button";
 
 const Header = () => {
+  const navBarRef = useRef<HTMLDivElement | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const toggleIsMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  // Close navbar on window resize
   useEffect(() => {
-    const windowSize = () => {
-      console.log(window.innerWidth);
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
     };
-    window.addEventListener("resize",windowSize);
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   return (
     <React.Fragment>
       <header id={headerStyles.mainHeader} className={headerStyles.mainHeader}>
         <div id={headerStyles.mainHeaderItem1}>
           <figure>
-            <img
-              className={headerStyles.logo}
-              src={defaultLogo}
-              alt="gd_logo"
-            />
+            <img src={logo} alt="gd_logo" />
           </figure>
         </div>
-        <div id={headerStyles.mainHeaderItem2}>
+        <div
+          ref={navBarRef}
+          id={headerStyles.mainHeaderItem2}
+          className={isMenuOpen ? headerStyles.active : ""}
+        >
           <nav>
             <ul>
               <li>
-                <a href="#home">h1</a>
+                <a href="#home">About</a>
               </li>
               <li>
-                <a href="#about">h2</a>
+                <a href="#about">Experience</a>
               </li>
               <li>
-                <a href="#work">h3</a>
+                <a href="#work">Work</a>
               </li>
               <li>
-                <a href="#projects">h4</a>
+                <a href="#projects">Contact</a>
               </li>
+              <Button />
             </ul>
           </nav>
-          {/* <FontAwesomeIcon icon={faBars} />
-          <FontAwesomeIcon icon={faXmark} /> */}
         </div>
+        <FontAwesomeIcon
+          icon={isMenuOpen ? faXmark : faBars}
+          onClick={toggleIsMenuOpen}
+          id={isMenuOpen ? headerStyles.closeIcon : headerStyles.menuIcon}
+        />
       </header>
     </React.Fragment>
   );
