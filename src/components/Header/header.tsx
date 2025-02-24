@@ -52,7 +52,7 @@ const Header = () => {
               <li>
                 <a href="#projects">Contact</a>
               </li>
-              <Button />
+              <Button value="Resume" />
             </ul>
           </nav>
         </div>
