@@ -1,0 +1,7 @@
+section.projects {
+  border: 1px solid rgb(13, 174, 26);
+  width: 90%;
+  margin: auto;
+  padding: 30px 100px;
+  font-weight: var(--font-weight);
+}

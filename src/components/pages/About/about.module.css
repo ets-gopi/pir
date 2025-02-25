@@ -1,0 +1,7 @@
+section.about {
+  border: 1px solid rgb(197, 224, 17);
+  width: 90%;
+  margin: auto;
+  padding: 30px 100px;
+  font-weight: var(--font-weight);
+}
