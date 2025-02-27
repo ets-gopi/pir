@@ -1,8 +1,7 @@
 #footer {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  /* border: 1px solid red; */
   width: 90%;
   margin: auto;
+  text-align: center;
+  line-height: 1.3;
 }

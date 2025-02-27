@@ -1,7 +1,26 @@
 section.contact {
-  border: 1px solid rgb(16, 75, 224);
+  /* border: 1px solid rgb(16, 75, 224); */
   width: 90%;
-  margin: auto;
+  margin: 100px auto;
   padding: 30px 100px;
-  font-weight: var(--font-weight);
+}
+section.contact > div:first-child {
+  position: relative;
+  /* border: 1px solid rgb(16, 75, 224); */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+section.contact > div:first-child > header {
+  color: var(--color-text-highligth);
+}
+
+section.contact > div:first-child > h2 {
+  color: var(--color-text-secondary);
+  font-size: 30px;
+}
+
+section.contact > div:first-child > p {
+  line-height: 1.3;
 }

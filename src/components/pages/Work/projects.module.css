@@ -1,7 +1,141 @@
 section.projects {
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   width: 90%;
-  margin: auto;
+  margin: 100px auto;
   padding: 30px 100px;
+}
+section.projects header h2 {
+  counter-increment: about-counter;
+  font-family: var(--font-secondary);
   font-weight: var(--font-weight);
+  color: var(--color-text-secondary);
+}
+section.projects header h2::before {
+  content: "0" counter(about-counter) ".";
+  margin-right: 15px;
+  font-size: 22px;
+  color: var(--color-text-highligth);
+}
+
+section.projects header h2::after {
+  content: "";
+  margin-left: 15px;
+  width: 300px;
+  height: 0.5px;
+  background-color: var(--color-text-primary);
+  display: inline-block;
+  position: relative;
+  top: -8px;
+}
+
+section.projects .projectCard {
+  /* border: 1px solid rgb(13, 174, 26); */
+  position: relative;
+  padding: 10px;
+  margin: 30px 0px;
+}
+
+section.projects .projectCard > figure {
+  width: 450px;
+  height: 300px;
+  position: relative;
+}
+section.projects .projectCard > figure > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+section.projects .projectCard > figure > div.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-color: var(--color-text-highligth);
+  opacity: 0.4;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+section.projects .projectCard:hover > figure > div.overlay {
+  opacity: 0;
+}
+
+section.projects .projectCard > div.cardContent {
+  /* border: 1px solid rgb(13, 174, 26); */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+}
+section.projects .projectCard > div.cardContent > p {
+  color: var(--color-text-highligth);
+  font-size: 13px;
+}
+
+section.projects .projectCard > div.cardContent > h4 {
+  color: var(--color-text-secondary);
+  font-size: 20px;
+}
+section.projects .projectCard > div.cardContent > div {
+  width: 55%;
+  /* border: 1px solid rgb(13, 174, 26); */
+  background-color: #112240;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 14px;
+  position: relative;
+}
+section.projects .projectCard > div.cardContent > div > span {
+  color: var(--color-text-highligth);
+  transition: color 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+section.projects .projectCard > div.cardContent > div > span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.5px;
+  background-color: var(--color-text-highligth);
+  transition: width 0.3s;
+}
+section.projects .projectCard > div.cardContent > div > span:hover::after {
+  width: 100%;
+}
+
+section.projects .projectCard > div.cardContent > ul {
+  list-style-type: none;
+  /* border: 1px solid rgb(13, 174, 26); */
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+section.projects .projectCard > div.cardContent > ul > li {
+  display: inline;
+  margin: 10px;
+}
+.cardContentEven {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+}
+.cardContentOdd {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.even {
+  display: flex;
+  flex-direction: row;
+}
+.odd {
+  display: flex;
+  flex-direction: row-reverse;
 }

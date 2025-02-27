@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <React.Fragment>
       <footer id={footerPageStyles.footer}>
-        <p>Designed & Built by Gopi Muppuri</p>
-        <p>&copy; 2025.All rights reserved.</p>
+        Designed & Built by Gopi Muppuri <br />
+        &copy; 2025.All rights reserved.
       </footer>
     </React.Fragment>
   );

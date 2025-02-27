@@ -10,10 +10,11 @@ const HomePage = () => {
       <h3>I build things for the web.</h3>
       <p>
         Experienced MERN stack developer with hands-on experience in developing
-        robust web applications. Proficient in Node.js, React.js, Python,and
-        database management systems like MySQL and MongoDB. Skilled in creating
-        visually appealing interfaces and collaborating with cross-functional
-        teams to deliver high-quality solutions.
+        robust web applications. Proficient in <span>Node.js</span> ,
+        <span>React.js</span> ,<span>Python</span> and database management
+        systems like <span>MySQL</span> and <span> MongoDB</span>. Skilled in
+        creating visually appealing interfaces and collaborating with
+        cross-functional teams to deliver high-quality solutions.
       </p>
       <Button value="Explore" />
     </section>

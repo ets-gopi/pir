@@ -1,3 +1,5 @@
+import { blockchain, hatimi } from "../../../assets";
+
 type ProjectObj = {
   title: string;
   description: string;
@@ -6,35 +8,18 @@ type ProjectObj = {
 };
 const projectsdata: ProjectObj[] = [
   {
-    title: "Blockchain Transaction System &ndash; Goudla",
+    title: "Blockchain Transaction System - Goudla",
     description:
-      "Developed a blockchain-based transaction system focusing on cryptocurrency transfers using a new blockchain called Goudla. Implemented secure and efficient transactions for Bitcoin, Ethereum, and other coins within a testnet environment.",
-    tags: [
-      "VS Code",
-      "#Blockchain",
-      "#Cryptocurrency",
-      "#Testnet",
-      "NodeJs",
-      "ExpressJs",
-      "MongoDB",
-    ],
-    links: ["https://github.com/GD-0606/blockchain"],
+      "Developed a <span>blockchain-based transaction</span> system focusing on cryptocurrency transfers using a new blockchain called <span>Goudla</span>. Implemented secure and efficient transactions for <span>Bitcoin</span>, <span>Ethereum</span>, and other coins within a testnet environment.",
+    tags: ["#Blockchain", "#Cryptocurrency", "#Testnet", "NodeJs", "MongoDB"],
+    links: [blockchain, "https://github.com/GD-0606/blockchain"],
   },
   {
     title: "Hatimi Hotel Management System",
     description:
-      "Developed a full-stack hotel booking system supporting multiple properties across different locations. Built the backend with Node.js, Express.js, and MongoDB, implementing replication and transactions to enhance booking security. Integrated Razorpay for seamless payments and managed the frontend for a complete user experience.",
-    tags: [
-      "VS Code",
-      "#BookingSystem",
-      "#HotelManagement",
-      "#PaymentIntegration",
-      "#MERNStack",
-      "NodeJs",
-      "ExpressJs",
-      "MongoDB",
-    ],
-    links: ["https://github.com/GD-0606/bookingServer"],
+      "Developed a <span>full-stack hotel booking </span> system supporting multiple properties across different locations. Built the backend with <span>Node.js</span>, <span>Express.js</span>, and <span>MongoDB</span>, implementing replication and transactions to enhance booking security. Integrated <span>Razorpay</span> for seamless payments and managed the frontend for a complete user experience.",
+    tags: ["#BookingSystem", "#HotelManagement", "#MERNStack", "NodeJs"],
+    links: [hatimi, "https://github.com/GD-0606/bookingServer"],
   },
 ];
 

@@ -4,10 +4,16 @@ const ExpPage = () => {
   return (
     <React.Fragment>
       <section id="exp" className={expPageStyles.exp}>
-        <header>02.Where I&rsquo;ve Worked</header>
-        <div>
-          <div>
-            Full Stack Developer @ Entitledarts 2023 - Present
+        <header>
+          <h2>Where I&rsquo;ve Worked</h2>
+        </header>
+        <div id={expPageStyles.expContent}>
+          <>
+            <span><strong>Full Stack Developer</strong> </span>
+            <span>
+              <strong>@ Entitledarts</strong>
+            </span>
+            <p>2023 - Present</p>
             <ul>
               <li>
                 {" "}
@@ -15,6 +21,7 @@ const ExpPage = () => {
                 including Goudla BlockChain and Haitmi Resort projects.
               </li>
               <li>
+                {" "}
                 Work with creative directors to research, develop, and design
                 technical solutions that meet business needs.
               </li>
@@ -24,11 +31,12 @@ const ExpPage = () => {
                 turn creative ideas into functional products.{" "}
               </li>
               <li>
+                {" "}
                 Support the engineering team by sharing knowledge, mentoring,
                 and fostering teamwork.
               </li>
             </ul>
-          </div>
+          </>
         </div>
       </section>
     </React.Fragment>
