@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/header";
 import HomePage from "./components/pages/Home/homePage";
@@ -16,37 +16,55 @@ import AboutPage from "./components/pages/About/aboutPage";
 import ProjectsPage from "./components/pages/Work/projectsPage";
 import ExpPage from "./components/pages/Experience/expriencePage";
 import ContactPage from "./components/pages/Contact/contactPage";
+import Lader from "./components/Loader/loader";
 function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>;
+    timer = setTimeout(() => {
+      setIsLoading(false);
+      clearTimeout(timer);
+    }, 2000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
   return (
     <React.Fragment>
-      <Header />
-      <main>
-        <HomePage />
-        <AboutPage />
-        <ExpPage />
-        <ProjectsPage />
-        <ContactPage />
-      </main>
-      <Footer />
-      <aside id="sidebar1">
-        <Link url="https://github.com/GD-0606">
-          <FontAwesomeIcon icon={faGithub} title="Github" />
-        </Link>
-        <Link url="https://www.linkedin.com/in/gopimuppuri/">
-          <FontAwesomeIcon icon={faLinkedin} title="Linkedin" />
-        </Link>
-        <Link url="https://www.hackerrank.com/profile/muppurigopi117/">
-          <FontAwesomeIcon icon={faHackerrank} title="Hackerrank" />
-        </Link>
-        <Link url=" https://www.linux.org/">
-          <FontAwesomeIcon icon={faLinux} title="Linux" />
-        </Link>
-        <Sidebar />
-      </aside>
-      <aside id="sidebar2">
-        <p>muppurigopi117@gmail.com</p>
-        <Sidebar />
-      </aside>
+      {isLoading ? (
+        <Lader />
+      ) : (
+        <React.Fragment>
+          <Header />
+          <main>
+            <HomePage />
+            <AboutPage />
+            <ExpPage />
+            <ProjectsPage />
+            <ContactPage />
+          </main>
+          <Footer />
+          <aside id="sidebar1">
+            <Link url="https://github.com/GD-0606">
+              <FontAwesomeIcon icon={faGithub} title="Github" />
+            </Link>
+            <Link url="https://www.linkedin.com/in/gopimuppuri/">
+              <FontAwesomeIcon icon={faLinkedin} title="Linkedin" />
+            </Link>
+            <Link url="https://www.hackerrank.com/profile/muppurigopi117/">
+              <FontAwesomeIcon icon={faHackerrank} title="Hackerrank" />
+            </Link>
+            <Link url=" https://www.linux.org/">
+              <FontAwesomeIcon icon={faLinux} title="Linux" />
+            </Link>
+            <Sidebar />
+          </aside>
+          <aside id="sidebar2">
+            <p>muppurigopi117@gmail.com</p>
+            <Sidebar />
+          </aside>
+        </React.Fragment>
+      )}
     </React.Fragment>
   );
 }

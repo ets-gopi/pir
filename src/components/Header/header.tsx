@@ -4,6 +4,7 @@ import headerStyles from "./header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Buttons/button";
+import Lader from "../Loader/loader";
 
 const Header = () => {
   const navBarRef = useRef<HTMLDivElement | null>(null);
