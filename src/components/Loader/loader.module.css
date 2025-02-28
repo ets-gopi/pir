@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #020c1b;
 }
 /* Stroke animation */
 .hexagon polygon {
@@ -21,8 +22,8 @@
 .hexagon text {
   fill: #5bf0cf;
   font-size: 25px;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight);
   dominant-baseline: middle;
 }
 .hexagon .letterG {

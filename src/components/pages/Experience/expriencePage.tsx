@@ -9,7 +9,9 @@ const ExpPage = () => {
         </header>
         <div id={expPageStyles.expContent}>
           <>
-            <span><strong>Full Stack Developer</strong> </span>
+            <span>
+              <strong>Full Stack Developer</strong>{" "}
+            </span>
             <span>
               <strong>@ Entitledarts</strong>
             </span>

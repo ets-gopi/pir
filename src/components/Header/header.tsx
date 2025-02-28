@@ -42,16 +42,16 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <a href="#home">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="#about">Experience</a>
+                <a href="#exp">Experience</a>
               </li>
               <li>
-                <a href="#work">Work</a>
+                <a href="#projects">Work</a>
               </li>
               <li>
-                <a href="#projects">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
               <Button value="Resume" />
             </ul>
