@@ -3,8 +3,7 @@ section.home {
   width: 90%;
   margin: auto;
   padding: 30px 100px;
-
-
+  position: relative;
 }
 section.home div {
   color: var(--color-text-highligth);
@@ -52,4 +51,101 @@ section.home p span:hover::after {
 
 section.home button {
   /* border: 1px solid rgb(42, 230, 13); */
+}
+
+/* Device Type	Screen Width (px)
+Extra Small (XS)	0 - 575px (Mobile)
+Small (SM)	576 - 767px (Mobile)
+Medium (MD)	768 - 991px (Tablet)
+Large (LG)	992 - 1199px (Laptop)
+Extra Large (XL)	1200 - 1399px (Desktop)
+XXL Screens	1400px and above */
+/* CSS Media Queries for Responsiveness */
+
+@media (max-width: 400px) {
+  section.home {
+    /* border: 1px solid rgb(223, 18, 192); */
+    padding: 20px 20px;
+    width: 100%;
+  }
+  section.home div {
+    margin: 0;
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
+  section.home > h1 {
+    font-size: 40px;
+    line-height: normal;
+  }
+  section.home > h3 {
+    font-size: 25px;
+    line-height: normal;
+  }
+  section.home > p {
+    width: 100%;
+    line-height: normal;
+    font-size: 15px;
+  }
+}
+@media (min-width: 400px) and (max-width: 576px) {
+  section.home {
+    border: 1px solid rgb(223, 18, 192);
+    padding: 10px 10px;
+  }
+  section.home > h1 {
+    font-size: 45px;
+  }
+  section.home > h3 {
+    font-size: 28px;
+  }
+  section.home > p {
+    width: 100%;
+    line-height: 1.1;
+    font-size: 15px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  section.home {
+    border: 1px solid rgb(25, 18, 223);
+    padding: 30px 30px;
+  }
+  section.home > h1 {
+    font-size: 60px;
+  }
+  section.home > h3 {
+    font-size: 38px;
+  }
+  section.home > p {
+    width: 100%;
+    line-height: 1.1;
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.home {
+    border: 1px solid rgb(168, 223, 18);
+    padding-left: 50px;
+    padding-right: 70px;
+  }
+  section.home > h3 {
+    font-size: 50px;
+  }
+  section.home > p {
+    width: 100%;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.home {
+    border: 1px solid rgb(18, 223, 209);
+    padding-left: 50px;
+    padding-right: 70px;
+  }
+  section.home > h3 {
+    font-size: 55px;
+  }
+  section.home > p {
+    width: 90%;
+  }
 }

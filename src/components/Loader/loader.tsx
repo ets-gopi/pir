@@ -1,16 +1,24 @@
 import React from "react";
 import loaderStyles from "./loader.module.css";
-const Lader = () => {
+type LaderProps = {
+  animation?: boolean;
+  style?: React.CSSProperties;
+};
+
+const Lader = ({ animation = false, style = {} }: LaderProps) => {
   return (
     <React.Fragment>
-      <div className={loaderStyles.hexagonContainer}>
+      <div className={loaderStyles.hexagonContainer} style={style}>
         <svg
           id="logo"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 84 96"
-          width="80px"
-          height="80px"
+          className={`${
+            Object.keys(style).length > 0
+              ? loaderStyles.addSvgCustomCSS
+              : loaderStyles.defaultSvgCSS
+          }`}
         >
           <title>Hexagon Logo</title>
           <g
@@ -18,11 +26,24 @@ const Lader = () => {
             transform="translate(-8.000000, -2.000000)"
           >
             <g transform="translate(11.000000, 5.000000)">
-              <polygon points="39 0 0 22 0 67 39 90 78 68 78 23" />
-              <text className={loaderStyles.letterG} x="28%" y="50%">
+              <polygon
+                points="39 0 0 22 0 67 39 90 78 68 78 23"
+                className={`${
+                  animation && loaderStyles.addDrawBorderAnimation
+                }`}
+              />
+              <text
+                className={`${animation && loaderStyles.letterG}`}
+                x="28%"
+                y="50%"
+              >
                 G
               </text>
-              <text className={loaderStyles.letterD} x="50%" y="50%">
+              <text
+                className={`${animation && loaderStyles.letterD}`}
+                x="50%"
+                y="50%"
+              >
                 D
               </text>
             </g>

@@ -24,7 +24,7 @@ function App() {
     timer = setTimeout(() => {
       setIsLoading(false);
       clearTimeout(timer);
-    }, 2000);
+    }, 2500);
     return () => {
       clearTimeout(timer);
     };
@@ -32,7 +32,7 @@ function App() {
   return (
     <React.Fragment>
       {isLoading ? (
-        <Lader />
+        <Lader animation={true} />
       ) : (
         <React.Fragment>
           <Header />

@@ -11,12 +11,17 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const toggleIsMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
+    document.body.classList.toggle(headerStyles.no_scroll);
   };
   // Close navbar on window resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setIsMenuOpen(false);
+        // if(document.body.classList.contains(headerStyles.no_scroll)){
+          
+        // }
+        // document.body.classList.toggle(headerStyles.no_scroll);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -31,13 +36,23 @@ const Header = () => {
       <header id={headerStyles.mainHeader} className={headerStyles.mainHeader}>
         <div id={headerStyles.mainHeaderItem1}>
           <figure>
-            <img src={logo} alt="gd_logo" />
+            {/* <img src={logo} alt="gd_logo" /> */}
+            <Lader
+              style={{
+                display: "flex",
+                height: "70px",
+              }}
+            />
           </figure>
         </div>
         <div
           ref={navBarRef}
           id={headerStyles.mainHeaderItem2}
           className={isMenuOpen ? headerStyles.active : ""}
+          onClick={() => {
+            setIsMenuOpen(false);
+            document.body.classList.remove(headerStyles.no_scroll);
+          }}
         >
           <nav>
             <ul>

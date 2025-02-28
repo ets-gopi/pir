@@ -5,11 +5,15 @@ section.about {
   padding: 30px 160px;
   counter-reset: about-counter;
 }
+section.about header {
+  /* border: 1px solid rgb(197, 224, 17); */
+}
 section.about header h2 {
   counter-increment: about-counter;
   font-family: var(--font-secondary);
   font-weight: var(--font-weight);
   color: var(--color-text-secondary);
+  position: relative;
 }
 section.about header h2::before {
   content: "0" counter(about-counter) ".";
@@ -20,13 +24,13 @@ section.about header h2::before {
 
 section.about header h2::after {
   content: "";
-  margin-left: 15px;
-  width: 300px;
+  width: 50%;
   height: 0.5px;
   background-color: var(--color-text-primary);
   display: inline-block;
-  position: relative;
-  top: -8px;
+  position: absolute;
+  top: 15px;
+  margin-left: 10px;
 }
 
 section.about #aboutContent {
@@ -103,8 +107,8 @@ section.about
   top: -4px;
 }
 section.about #aboutContent > div:last-child figure {
-  width: 280px;
-  height: 280px;
+  width: 270px;
+  height: 270px;
   position: relative;
 }
 section.about #aboutContent > div:last-child figure div.rectangle {
@@ -169,3 +173,118 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
   height:300px;
   border-radius: 5px;
 } */
+
+@media (max-width: 400px) {
+  section.about {
+    /* border: 1px solid rgb(224, 17, 55); */
+    padding: 20px 20px;
+    width: 100%;
+  }
+  section.about header h2 {
+    font-size: 18px;
+  }
+  section.about header h2::before {
+    font-size: 20px;
+  }
+  section.about header h2::after {
+    width: 25%;
+  }
+  section.about #aboutContent {
+    flex-direction: column;
+    gap: 100px;
+    padding: 30px 0px;
+  }
+  section.about #aboutContent > div:first-child > div {
+    width: 100%;
+  }
+  section.about #aboutContent > div:first-child > div:nth-child(3) > ul {
+    grid-template-columns: auto;
+    gap: 15px;
+  }
+  section.about #aboutContent > div:last-child figure {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+}
+@media (min-width: 400px) and (max-width: 576px) {
+  section.about {
+    border: 1px solid rgb(224, 17, 55);
+    padding: 10px 10px;
+  }
+
+  section.about #aboutContent {
+    flex-direction: column;
+    gap: 100px;
+    padding: 32px 10px;
+  }
+  section.about #aboutContent > div:first-child > div {
+    width: 100%;
+  }
+  section.about #aboutContent > div:last-child figure {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  section.about {
+    border: 1px solid rgb(224, 17, 55);
+    padding: 30px 30px;
+  }
+
+  section.about #aboutContent {
+    flex-direction: column;
+    gap: 100px;
+    padding: 32px 10px;
+  }
+  section.about #aboutContent > div:first-child > div {
+    width: 100%;
+  }
+  section.about #aboutContent > div:last-child figure {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.about {
+    border: 1px solid rgb(20, 224, 17);
+    padding-left: 100px;
+    padding-right: 70px;
+  }
+
+  section.about #aboutContent {
+    flex-direction: column;
+    gap: 50px;
+    padding: 32px 10px;
+  }
+  section.about #aboutContent > div:first-child > div {
+    width: 100%;
+  }
+  section.about #aboutContent > div:last-child figure {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.about {
+    border: 1px solid rgb(224, 58, 17);
+    padding-left: 140px;
+    padding-right: 70px;
+  }
+  section.about #aboutContent {
+    gap: 50px;
+    padding: 32px 10px;
+  }
+  section.about #aboutContent > div:first-child > div {
+    width: 100%;
+  }
+  section.about #aboutContent > div:last-child figure {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+}

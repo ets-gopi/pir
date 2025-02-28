@@ -5,8 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #020c1b;
+
 }
+
+
 /* Stroke animation */
 .hexagon polygon {
   fill: none;
@@ -15,8 +17,6 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 420;
-  stroke-dashoffset: 420;
-  animation: drawBorder 1s ease-in-out forwards;
 }
 /* Text styling */
 .hexagon text {
@@ -30,15 +30,14 @@
   opacity: 0;
   transform: translateX(30px);
   animation: moveG 0.8s ease-out forwards;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 
-/* "D" Letter - Move from Left */
 .hexagon .letterD {
   opacity: 0;
   transform: translateX(-30px); /* Start off-screen left */
   animation: moveD 0.8s ease-out forwards;
-  animation-delay: 1s; /* Starts after hexagon */
+  animation-delay: 1.5s; /* Starts after hexagon */
 }
 
 /* Border drawing animation */
@@ -73,4 +72,23 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.addDrawBorderAnimation {
+  stroke-dashoffset: 420;
+  animation: drawBorder 2s ease-in-out forwards;
+}
+/* .addmoveGAnimation {
+  animation: moveG 1s ease-in-out forwards;
+}
+.addmoveDAnimation {
+  animation: moveD 1s ease-in-out forwards;
+} */
+.defaultSvgCSS {
+  width: 80px;
+  height: 80px;
+}
+.addSvgCustomCSS {
+  width: 50px;
+  height: 50px;
 }
