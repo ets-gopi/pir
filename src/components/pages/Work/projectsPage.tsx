@@ -32,6 +32,11 @@ const ProjectsPage = () => {
                 <div
                   style={{ textAlign: `${ind % 2 === 0 ? "end" : "start"}` }}
                   dangerouslySetInnerHTML={{ __html: obj.description }}
+                  className={`${
+                    ind % 2 === 0
+                      ? projectsPageStyles.evenMargin
+                      : projectsPageStyles.oddMargin
+                  }`}
                 ></div>
                 <ul>
                   {obj.tags.map((val, ind) => (

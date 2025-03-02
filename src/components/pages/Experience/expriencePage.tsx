@@ -6,6 +6,9 @@ const ExpPage = () => {
       <section id="exp" className={expPageStyles.exp}>
         <header>
           <h2>Where I&rsquo;ve Worked</h2>
+          <div>
+            <div></div>
+          </div>
         </header>
         <div id={expPageStyles.expContent}>
           <>

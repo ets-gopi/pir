@@ -1,5 +1,5 @@
 section.projects {
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   width: 90%;
   margin: 100px auto;
   padding: 30px 100px;
@@ -9,11 +9,12 @@ section.projects header h2 {
   font-family: var(--font-secondary);
   font-weight: var(--font-weight);
   color: var(--color-text-secondary);
+  font-size: 20px;
 }
 section.projects header h2::before {
   content: "0" counter(about-counter) ".";
   margin-right: 15px;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--color-text-highligth);
 }
 
@@ -27,46 +28,62 @@ section.projects header h2::after {
   position: relative;
   top: -8px;
 }
-
 section.projects .projectCard {
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   position: relative;
   padding: 10px;
   margin: 30px 0px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
 }
 
-section.projects .projectCard > figure {
-  width: 450px;
-  height: 300px;
+.projectCard figure {
+  grid-column: 1 / span 6;
+  width: 100%;
+  height: 100%;
   position: relative;
+  z-index: 1;
 }
+
+/* section.projects .projectCard {
+  border: 1px solid rgb(13, 174, 26);
+  position: relative;
+  padding: 10px;
+  margin: 30px 0px;
+} */
+
+/* section.projects .projectCard > figure {
+  flex-basis: 50%;
+  position: relative;
+} */
 section.projects .projectCard > figure > img {
   width: 100%;
   height: 100%;
   border-radius: 3px;
   transition: all 0.3s;
+  border: 1px solid red;
 }
 section.projects .projectCard > figure > div.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
-  background-color: var(--color-text-highligth);
-  opacity: 0.4;
+  background-color: #297083;
+  opacity: 0.6;
   border-radius: 3px;
   transition: all 0.3s;
 }
 
-section.projects .projectCard:hover > figure > div.overlay {
+section.projects .projectCard > figure:hover > div.overlay {
   opacity: 0;
 }
 
 section.projects .projectCard > div.cardContent {
-  /* border: 1px solid rgb(13, 174, 26); */
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 10px;
+  border: 1px solid rgb(13, 174, 26);
+  grid-column: 7 / -1;
+  z-index: 2;
+  position: relative;
 }
 section.projects .projectCard > div.cardContent > p {
   color: var(--color-text-highligth);
@@ -78,8 +95,7 @@ section.projects .projectCard > div.cardContent > h4 {
   font-size: 20px;
 }
 section.projects .projectCard > div.cardContent > div {
-  width: 55%;
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   background-color: #112240;
   border-radius: 5px;
   padding: 15px;
@@ -108,7 +124,7 @@ section.projects .projectCard > div.cardContent > div > span:hover::after {
 
 section.projects .projectCard > div.cardContent > ul {
   list-style-type: none;
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   margin: 0;
   padding: 0;
   font-size: 12px;
@@ -123,19 +139,91 @@ section.projects .projectCard > div.cardContent > ul > li {
   flex-direction: column;
   align-items: end;
   gap: 20px;
+  margin-left: -5%;
 }
 .cardContentOdd {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 20px;
+  margin-right: -5%;
 }
 
 .even {
-  display: flex;
-  flex-direction: row;
+  direction: ltr;
 }
 .odd {
-  display: flex;
-  flex-direction: row-reverse;
+  direction: rtl;
 }
+.evenMargin {
+  margin-left: -5%;
+}
+.oddMargin {
+  margin-right: -5%;
+}
+@media (max-width: 400px) {
+  section.projects {
+    border: 1px solid rgb(245, 11, 54);
+    padding: 20px 20px;
+    width: 100%;
+  }
+}
+@media (min-width: 400px) and (max-width: 576px) {
+  section.projects {
+    border: 1px solid rgb(214, 217, 16);
+    padding: 10px 10px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  section.projects {
+    border: 1px solid rgb(47, 14, 235);
+    padding: 30px 30px;
+  }
+  /* section.projects .projectCard {
+    width: 300px;
+    height:300px;
+  } */
+  section.projects .projectCard > figure > div.overlay {
+    background-color: #0c2034;
+    opacity: 0.7;
+  }
+  section.projects .projectCard:hover > figure > div.overlay {
+    opacity: 0.7;
+  }
+  section.projects .projectCard.odd {
+    flex-direction: row;
+  }
+  section.projects .projectCard > figure {
+    width: 450px;
+    height: 300px;
+    position: relative;
+  }
+  section.projects .projectCard > div.cardContent.cardContentEven {
+    align-items: start;
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.projects {
+    border: 1px solid rgb(235, 14, 198);
+    padding-left: 50px;
+    padding-right: 70px;
+  }
+  section.projects .projectCard > figure {
+    flex-basis: 70%;
+    position: relative;
+  }
+
+  section.projects .projectCard > div.cardContent {
+    border: 1px solid rgb(13, 174, 26);
+    flex-basis: 30%;
+  }
+}
+
+/* @media (min-width: 992px) and (max-width: 1199px) {
+  section.projects {
+    border: 1px solid rgb(224, 58, 17);
+    padding-left: 50px;
+    padding-right: 70px;
+  }
+} */

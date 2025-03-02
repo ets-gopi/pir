@@ -18,10 +18,10 @@ const Header = () => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setIsMenuOpen(false);
-        // if(document.body.classList.contains(headerStyles.no_scroll)){
-          
-        // }
-        // document.body.classList.toggle(headerStyles.no_scroll);
+        if (document.body.classList.contains(headerStyles.no_scroll)) {
+          document.body.classList.remove(headerStyles.no_scroll);
+        }
+        //console.log(document.body.classList.contains(headerStyles.no_scroll));
       }
     };
     window.addEventListener("resize", handleResize);
@@ -49,13 +49,15 @@ const Header = () => {
           ref={navBarRef}
           id={headerStyles.mainHeaderItem2}
           className={isMenuOpen ? headerStyles.active : ""}
-          onClick={() => {
-            setIsMenuOpen(false);
-            document.body.classList.remove(headerStyles.no_scroll);
-          }}
         >
           <nav>
-            <ul>
+            <ul
+              onClick={() => {
+                setIsMenuOpen(false);
+                document.body.classList.remove(headerStyles.no_scroll);
+                console.log("test");
+              }}
+            >
               <li>
                 <a href="#about">About</a>
               </li>

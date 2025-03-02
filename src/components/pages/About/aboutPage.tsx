@@ -8,6 +8,9 @@ const AboutPage = () => {
       <section id="about" className={aboutPageStyles.about}>
         <header>
           <h2>About Me</h2>
+          <div>
+            <div></div>
+          </div>
         </header>
         <div id={aboutPageStyles.aboutContent}>
           <div>

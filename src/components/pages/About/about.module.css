@@ -7,30 +7,35 @@ section.about {
 }
 section.about header {
   /* border: 1px solid rgb(197, 224, 17); */
+  display: flex;
 }
-section.about header h2 {
+section.about header > h2 {
   counter-increment: about-counter;
   font-family: var(--font-secondary);
   font-weight: var(--font-weight);
   color: var(--color-text-secondary);
+  /* border: 1px solid rgb(17, 20, 224); */
   position: relative;
+  font-size: 20px;
 }
-section.about header h2::before {
+section.about header > h2::before {
   content: "0" counter(about-counter) ".";
   margin-right: 15px;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--color-text-highligth);
 }
 
-section.about header h2::after {
-  content: "";
+section.about header > div {
+  /* border: 1px solid rgb(254, 9, 33); */
+  flex-grow: 1;
+  padding-left: 20px;
+}
+section.about header > div > div {
   width: 50%;
   height: 0.5px;
   background-color: var(--color-text-primary);
-  display: inline-block;
-  position: absolute;
-  top: 15px;
-  margin-left: 10px;
+  position: relative;
+  top: 50%;
 }
 
 section.about #aboutContent {
@@ -185,9 +190,13 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
   }
   section.about header h2::before {
     font-size: 20px;
+    margin-right: 10px;
   }
-  section.about header h2::after {
-    width: 25%;
+  section.about header > div {
+    padding-left: 10px;
+  }
+  section.about header > div > div {
+    width: 100%;
   }
   section.about #aboutContent {
     flex-direction: column;
@@ -212,6 +221,9 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     border: 1px solid rgb(224, 17, 55);
     padding: 10px 10px;
   }
+  section.about header > div > div {
+    width: 100%;
+  }
 
   section.about #aboutContent {
     flex-direction: column;
@@ -232,7 +244,9 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     border: 1px solid rgb(224, 17, 55);
     padding: 30px 30px;
   }
-
+  section.about header > div > div {
+    width: 100%;
+  }
   section.about #aboutContent {
     flex-direction: column;
     gap: 100px;

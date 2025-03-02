@@ -7,30 +7,34 @@ section.exp {
 }
 section.exp header {
   /* border: 1px solid rgb(209, 71, 12); */
+  display: flex;
 }
 section.exp header h2 {
   counter-increment: about-counter;
   font-family: var(--font-secondary);
   font-weight: var(--font-weight);
   color: var(--color-text-secondary);
+  /* border: 1px solid rgb(209, 71, 12); */
   position: relative;
+  font-size: 20px;
 }
 section.exp header h2::before {
   content: "0" counter(about-counter) ".";
   margin-right: 15px;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--color-text-highligth);
 }
-
-section.exp header h2::after {
-  content: "";
-  width: 50%;
+section.exp header > div {
+  /* border: 1px solid rgb(254, 9, 33); */
+  flex-grow: 1;
+  padding-left: 20px;
+}
+section.exp header > div > div {
+  width: 100%;
   height: 0.5px;
   background-color: var(--color-text-primary);
-  display: inline-block;
-  position: absolute;
-  top: 15px;
-  margin-left: 10px;
+  position: relative;
+  top: 50%;
 }
 
 section.exp #expContent {
@@ -95,12 +99,14 @@ section.exp #expContent > ul > li::before {
   }
   section.exp header h2::before {
     font-size: 20px;
+    margin-right: 10px;
   }
-  section.exp header h2::after {
-    width: 10%;
-  }
-  section.exp header h2 {
+
+  section.exp header > h2 {
     font-size: 18px;
+  }
+  section.exp header > div {
+    padding-left: 10px;
   }
   section.exp #expContent {
     padding-left: 0px;
@@ -113,9 +119,7 @@ section.exp #expContent > ul > li::before {
     border: 1px solid rgb(58, 186, 29);
     padding: 10px 10px;
   }
-  section.exp header h2::after {
-    width: 20%;
-  }
+
   section.exp #expContent {
     padding-left: 50px;
     padding-top: 30px;
@@ -126,9 +130,7 @@ section.exp #expContent > ul > li::before {
     border: 1px solid rgb(29, 186, 160);
     padding: 30px 30px;
   }
-  section.exp header h2::after {
-    width: 35%;
-  }
+
   section.exp #expContent {
     padding-left: 50px;
     padding-top: 30px;
@@ -139,9 +141,6 @@ section.exp #expContent > ul > li::before {
     border: 1px solid rgb(224, 214, 17);
     padding-left: 180px;
     padding-right: 70px;
-  }
-  section.exp header h2::after {
-    width: 30%;
   }
   section.exp #expContent {
     padding-left: 50px;
