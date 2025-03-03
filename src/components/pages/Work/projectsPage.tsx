@@ -10,13 +10,14 @@ const ProjectsPage = () => {
         </header>
         {projectsdata?.map((obj, ind) => {
           return (
-            <article
-              key={ind}
-              className={`${projectsPageStyles.projectCard} ${
-                ind % 2 === 0 ? projectsPageStyles.even : projectsPageStyles.odd
-              }`}
-            >
-              <figure>
+            <article key={ind} className={`${projectsPageStyles.projectCard}`}>
+              <figure
+                className={`${
+                  ind % 2 === 0
+                    ? projectsPageStyles.evenfigure
+                    : projectsPageStyles.oddfigure
+                }`}
+              >
                 <img src={obj.links[0]} alt="" />
                 <div className={projectsPageStyles.overlay}></div>
               </figure>
