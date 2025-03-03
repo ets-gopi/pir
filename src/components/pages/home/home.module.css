@@ -89,7 +89,7 @@ XXL Screens	1400px and above */
 }
 @media (min-width: 400px) and (max-width: 576px) {
   section.home {
-    border: 1px solid rgb(223, 18, 192);
+    /* border: 1px solid rgb(223, 18, 192); */
     padding: 10px 10px;
   }
   section.home > h1 {
@@ -106,7 +106,7 @@ XXL Screens	1400px and above */
 }
 @media (min-width: 576px) and (max-width: 767px) {
   section.home {
-    border: 1px solid rgb(25, 18, 223);
+    /* border: 1px solid rgb(25, 18, 223); */
     padding: 30px 30px;
   }
   section.home > h1 {
@@ -121,9 +121,9 @@ XXL Screens	1400px and above */
     font-size: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 767px) and (max-width: 991px) {
   section.home {
-    border: 1px solid rgb(168, 223, 18);
+    /* border: 1px solid rgb(168, 223, 18); */
     padding-left: 50px;
     padding-right: 70px;
   }
@@ -136,9 +136,9 @@ XXL Screens	1400px and above */
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1199px) {
   section.home {
-    border: 1px solid rgb(18, 223, 209);
+    /* border: 1px solid rgb(18, 223, 209); */
     padding-left: 50px;
     padding-right: 70px;
   }

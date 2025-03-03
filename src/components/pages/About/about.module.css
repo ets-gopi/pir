@@ -218,7 +218,7 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
 }
 @media (min-width: 400px) and (max-width: 576px) {
   section.about {
-    border: 1px solid rgb(224, 17, 55);
+    /* border: 1px solid rgb(224, 17, 55); */
     padding: 10px 10px;
   }
   section.about header > div > div {
@@ -241,7 +241,7 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   section.about {
-    border: 1px solid rgb(224, 17, 55);
+    /* border: 1px solid rgb(224, 17, 55); */
     padding: 30px 30px;
   }
   section.about header > div > div {
@@ -261,9 +261,9 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     position: relative;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 767px) and (max-width: 991px) {
   section.about {
-    border: 1px solid rgb(20, 224, 17);
+    /* border: 1px solid rgb(20, 224, 17); */
     padding-left: 100px;
     padding-right: 70px;
   }
@@ -283,9 +283,9 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1199px) {
   section.about {
-    border: 1px solid rgb(224, 58, 17);
+    /* border: 1px solid rgb(224, 58, 17); */
     padding-left: 140px;
     padding-right: 70px;
   }

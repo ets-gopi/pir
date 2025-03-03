@@ -23,7 +23,13 @@ const ProjectsPage = () => {
                 <div
                   dangerouslySetInnerHTML={{ __html: obj.description }}
                 ></div>
-                <ul>
+                <ul
+                  className={`${
+                    ind % 2 === 0
+                      ? projectsPageStyles.even
+                      : projectsPageStyles.odd
+                  }`}
+                >
                   {obj.tags.map((val, ind) => (
                     <li key={ind}>{val}</li>
                   ))}
