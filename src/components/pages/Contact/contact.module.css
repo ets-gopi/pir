@@ -1,15 +1,17 @@
 section.contact {
-  /* border: 1px solid rgb(16, 75, 224); */
+  border: 1px solid rgb(16, 75, 224);
   width: 90%;
   margin: 100px auto;
   padding: 30px 100px;
 }
 section.contact > div:first-child {
   position: relative;
-  /* border: 1px solid rgb(16, 75, 224); */
+  border: 1px solid rgb(16, 75, 224);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
 }
 section.contact > div:first-child > header {
   color: var(--color-text-highligth);
@@ -17,78 +19,49 @@ section.contact > div:first-child > header {
 
 section.contact > div:first-child > h2 {
   color: var(--color-text-secondary);
-  font-size: 30px;
+  font-size: 40px;
 }
 
 section.contact > div:first-child > p {
+  width: 30%;
   line-height: 1.1;
+  text-align: center;
 }
 
 @media (max-width: 400px) {
-  section.exp {
+  section.contact {
     /* border: 1px solid rgb(58, 186, 29); */
     padding: 20px 20px;
     width: 100%;
   }
-  section.exp header h2::before {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-
-  section.exp header > h2 {
-    font-size: 18px;
-  }
-  section.exp header > div {
-    padding-left: 10px;
-  }
-  section.exp #expContent {
-    padding-left: 0px;
-    padding-top: 30px;
-  }
 }
 
 @media (min-width: 400px) and (max-width: 576px) {
-  section.exp {
+  section.contact {
     border: 1px solid rgb(58, 186, 29);
     padding: 10px 10px;
   }
-
-  section.exp #expContent {
-    padding-left: 50px;
-    padding-top: 30px;
-  }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  section.exp {
+  section.contact {
     border: 1px solid rgb(29, 186, 160);
     padding: 30px 30px;
   }
-
-  section.exp #expContent {
-    padding-left: 50px;
-    padding-top: 30px;
-  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  section.exp {
+  section.contact {
     border: 1px solid rgb(224, 214, 17);
-    padding-left: 180px;
-    padding-right: 70px;
-  }
-  section.exp #expContent {
     padding-left: 50px;
-    padding-top: 32px;
+    padding-right: 70px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  section.exp {
+  section.contact {
     border: 1px solid rgb(17, 224, 31);
-    padding-left: 220px;
+    padding-left: 50px;
     padding-right: 70px;
   }
-  section.exp #expContent {
-    padding-left: 90px;
-    padding-top: 64px;
-  }
 }
+
+/* 1536px, 1920px */
