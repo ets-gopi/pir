@@ -93,7 +93,7 @@ section.exp #expContent > ul > li::before {
 
 @media (max-width: 400px) {
   section.exp {
-    border: 1px solid rgb(58, 186, 29);
+    /* border: 1px solid rgb(58, 186, 29); */
     padding: 20px 20px;
     width: 100%;
   }

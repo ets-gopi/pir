@@ -7,7 +7,6 @@ section.contact {
 section.contact > div:first-child {
   position: relative;
   /* border: 1px solid rgb(16, 75, 224); */
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -22,5 +21,74 @@ section.contact > div:first-child > h2 {
 }
 
 section.contact > div:first-child > p {
-  line-height: 1.3;
+  line-height: 1.1;
+}
+
+@media (max-width: 400px) {
+  section.exp {
+    /* border: 1px solid rgb(58, 186, 29); */
+    padding: 20px 20px;
+    width: 100%;
+  }
+  section.exp header h2::before {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  section.exp header > h2 {
+    font-size: 18px;
+  }
+  section.exp header > div {
+    padding-left: 10px;
+  }
+  section.exp #expContent {
+    padding-left: 0px;
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 576px) {
+  section.exp {
+    border: 1px solid rgb(58, 186, 29);
+    padding: 10px 10px;
+  }
+
+  section.exp #expContent {
+    padding-left: 50px;
+    padding-top: 30px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  section.exp {
+    border: 1px solid rgb(29, 186, 160);
+    padding: 30px 30px;
+  }
+
+  section.exp #expContent {
+    padding-left: 50px;
+    padding-top: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.exp {
+    border: 1px solid rgb(224, 214, 17);
+    padding-left: 180px;
+    padding-right: 70px;
+  }
+  section.exp #expContent {
+    padding-left: 50px;
+    padding-top: 32px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.exp {
+    border: 1px solid rgb(17, 224, 31);
+    padding-left: 220px;
+    padding-right: 70px;
+  }
+  section.exp #expContent {
+    padding-left: 90px;
+    padding-top: 64px;
+  }
 }

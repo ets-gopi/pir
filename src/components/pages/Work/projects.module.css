@@ -1,8 +1,12 @@
 section.projects {
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   width: 90%;
   margin: 100px auto;
   padding: 30px 100px;
+}
+section.projects header {
+  /* border: 1px solid rgb(13, 174, 26); */
+  display: flex;
 }
 section.projects header h2 {
   counter-increment: about-counter;
@@ -10,6 +14,7 @@ section.projects header h2 {
   font-weight: var(--font-weight);
   color: var(--color-text-secondary);
   font-size: 20px;
+  position: relative;
 }
 section.projects header h2::before {
   content: "0" counter(about-counter) ".";
@@ -17,31 +22,39 @@ section.projects header h2::before {
   font-size: 18px;
   color: var(--color-text-highligth);
 }
-
-section.projects header h2::after {
-  content: "";
-  margin-left: 15px;
-  width: 300px;
+section.projects > header > div {
+  /* border: 1px solid rgb(254, 9, 33); */
+  flex-grow: 1;
+  padding-left: 20px;
+}
+section.projects > header > div > div {
+  width: 100%;
   height: 0.5px;
   background-color: var(--color-text-primary);
-  display: inline-block;
   position: relative;
-  top: -8px;
+  top: 50%;
 }
-section.projects .projectCard {
-  border: 1px solid rgb(13, 174, 26);
+section.projects > article.projectCard {
+  /* border: 1px solid rgb(174, 158, 13); */
   position: relative;
   padding: 10px;
   margin: 30px 0px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
+  grid-column: 1/8;
+}
+section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+  grid-column: 7/-1;
+}
 
-section.projects > .projectCard > figure {
+section.projects > article.projectCard > figure {
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 1;
+  grid-area: 1 / 6 / -1 / -1;
 }
 
 /* section.projects .projectCard {
@@ -55,14 +68,15 @@ section.projects > .projectCard > figure {
   flex-basis: 50%;
   position: relative;
 } */
-section.projects .projectCard > figure > img {
+
+section.projects > article.projectCard > figure > img {
   width: 100%;
   height: 100%;
   border-radius: 3px;
   transition: all 0.3s;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
-section.projects .projectCard > figure > div.overlay {
+section.projects > article.projectCard > figure > div.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -73,39 +87,43 @@ section.projects .projectCard > figure > div.overlay {
   transition: all 0.3s;
 }
 
-section.projects .projectCard > figure:hover > div.overlay {
+section.projects > article.projectCard > figure:hover > div.overlay {
   opacity: 0;
 }
 
-section.projects .projectCard > div.cardContent {
-  border: 1px solid rgb(13, 174, 26);
+section.projects > article.projectCard > div.cardContent {
+  /* border: 1px solid rgb(13, 174, 26); */
   z-index: 2;
   position: relative;
+  grid-area: 1 / 1 / -1 / 7;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
-section.projects .projectCard > div.cardContent > p {
+section.projects > article.projectCard > div.cardContent > p {
   color: var(--color-text-highligth);
   font-size: 13px;
 }
 
-section.projects .projectCard > div.cardContent > h4 {
+section.projects > article.projectCard > div.cardContent > h4 {
   color: var(--color-text-secondary);
   font-size: 20px;
 }
-section.projects .projectCard > div.cardContent > div {
-  border: 1px solid rgb(13, 174, 26);
+section.projects > article.projectCard > div.cardContent > div {
+  /* border: 1px solid rgb(13, 174, 26); */
   background-color: #112240;
   border-radius: 5px;
   padding: 15px;
   font-size: 14px;
   position: relative;
 }
-section.projects .projectCard > div.cardContent > div > span {
+section.projects > article.projectCard > div.cardContent > div > span {
   color: var(--color-text-highligth);
   transition: color 0.3s;
   position: relative;
   cursor: pointer;
 }
-section.projects .projectCard > div.cardContent > div > span::after {
+section.projects > article.projectCard > div.cardContent > div > span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -115,24 +133,32 @@ section.projects .projectCard > div.cardContent > div > span::after {
   background-color: var(--color-text-highligth);
   transition: width 0.3s;
 }
-section.projects .projectCard > div.cardContent > div > span:hover::after {
+section.projects
+  > article.projectCard
+  > div.cardContent
+  > div
+  > span:hover::after {
   width: 100%;
 }
 
-section.projects .projectCard > div.cardContent > ul {
+section.projects > article.projectCard > div.cardContent > ul {
   list-style-type: none;
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   margin: 0;
   padding: 0;
   font-size: 12px;
 }
 
-section.projects .projectCard > div.cardContent > ul > li {
+section.projects > article.projectCard > div.cardContent > ul > li {
   display: inline;
   margin: 10px;
 }
-.cardContentEven {
-  grid-column: 6 / -1;
+section.projects > article.projectCard > div.cardContent > a {
+  text-align: end;
+  padding-right: 10px;
+  font-size: 25px;
+}
+/* .cardContentEven {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -143,15 +169,7 @@ section.projects .projectCard > div.cardContent > ul > li {
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  grid-column: 1 / -6;
-}
-
-.evenfigure {
-  grid-column: 1 / 6;
-}
-.oddfigure {
-  grid-column: 6 / -1;
-}
+} */
 /* .evenContent {
   grid-column: 6 / -1;
 }
@@ -166,9 +184,57 @@ section.projects .projectCard > div.cardContent > ul > li {
 } */
 @media (max-width: 400px) {
   section.projects {
-    border: 1px solid rgb(245, 11, 54);
+    /* border: 1px solid rgb(245, 11, 54); */
     padding: 20px 20px;
     width: 100%;
+  }
+  section.projects > header h2::before {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  section.projects > header > h2 {
+    font-size: 18px;
+  }
+  section.projects > header > div {
+    padding-left: 10px;
+  }
+  section.projects > article.projectCard {
+    padding: 0px;
+  }
+  section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
+    grid-column: 1/-1;
+  }
+  section.projects > article.projectCard > figure {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  section.projects > article.projectCard > figure > div.overlay {
+    background-color: #0c2034;
+    opacity: 0.9;
+  }
+  section.projects article.projectCard:hover > figure > div.overlay {
+    opacity: 0.9;
+  }
+  section.projects > article.projectCard > div.cardContent {
+    grid-area: 1 / 1 / -1 / -1;
+    padding: 10px 15px;
+  }
+
+  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+    grid-column: 1/-1;
+  }
+
+  section.projects > article.projectCard > div.cardContent > div {
+    background-color: transparent;
+    padding: 0px;
+  }
+  section.projects > article.projectCard > div.cardContent > ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  section.projects > article.projectCard > div.cardContent > ul > li {
+    margin: 0px;
   }
 }
 @media (min-width: 400px) and (max-width: 576px) {
@@ -176,34 +242,81 @@ section.projects .projectCard > div.cardContent > ul > li {
     border: 1px solid rgb(214, 217, 16);
     padding: 10px 10px;
   }
+  section.projects > article.projectCard {
+    padding: 0px;
+  }
+  section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
+    grid-column: 1/-1;
+  }
+  section.projects > article.projectCard > figure {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  section.projects > article.projectCard > figure > div.overlay {
+    background-color: #0c2034;
+    opacity: 0.8;
+  }
+  section.projects article.projectCard:hover > figure > div.overlay {
+    opacity: 0.8;
+  }
+  section.projects > article.projectCard > div.cardContent {
+    grid-area: 1 / 1 / -1 / -1;
+    padding: 30px 0px;
+  }
+
+  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+    grid-column: 1/-1;
+  }
+
+  section.projects > article.projectCard > div.cardContent > div {
+    background-color: transparent;
+    padding: 0px;
+  }
+  section.projects > article.projectCard > div.cardContent > ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  section.projects > article.projectCard > div.cardContent > ul > li {
+    margin: 0px;
+  }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   section.projects {
     border: 1px solid rgb(47, 14, 235);
     padding: 30px 30px;
   }
-  /* section.projects .projectCard {
-    width: 300px;
-    height:300px;
-  } */
-  section.projects .projectCard > figure > div.overlay {
+  section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
+    grid-column: 1/-1;
+  }
+  section.projects > article.projectCard > figure {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  section.projects > article.projectCard > figure > div.overlay {
     background-color: #0c2034;
-    opacity: 0.7;
+    opacity: 0.8;
   }
-  section.projects .projectCard:hover > figure > div.overlay {
-    opacity: 0.7;
+  section.projects article.projectCard:hover > figure > div.overlay {
+    opacity: 0.8;
   }
-  section.projects .projectCard.odd {
-    flex-direction: row;
+  section.projects > article.projectCard > div.cardContent > div {
+    background-color: transparent;
+    padding: 0px;
   }
-  section.projects .projectCard > figure {
-    width: 450px;
-    height: 300px;
-    position: relative;
+  section.projects > article.projectCard > div.cardContent {
+    grid-area: 1 / 1 / -1 / -1;
+    padding: 30px 0px;
   }
-  section.projects .projectCard > div.cardContent.cardContentEven {
-    align-items: start;
-    gap: 20px;
+
+  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+    grid-column: 1 / -1;
+  }
+  section.projects > article.projectCard > div.cardContent > ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  section.projects > article.projectCard > div.cardContent > ul > li {
+    margin: 0px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -212,21 +325,12 @@ section.projects .projectCard > div.cardContent > ul > li {
     padding-left: 50px;
     padding-right: 70px;
   }
-  section.projects .projectCard > figure {
-    flex-basis: 70%;
-    position: relative;
-  }
-
-  section.projects .projectCard > div.cardContent {
-    border: 1px solid rgb(13, 174, 26);
-    flex-basis: 30%;
-  }
 }
 
-/* @media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   section.projects {
     border: 1px solid rgb(224, 58, 17);
     padding-left: 50px;
     padding-right: 70px;
   }
-} */
+}

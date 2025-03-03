@@ -11,9 +11,7 @@ const ContactPage = () => {
           <h2>Get In Touch </h2>
           <p>
             Although I&rsquo;m not currently looking for any new opportunities,{" "}
-            <br />
             my inbox is always open. Whether you have a question or just want to
-            <br />
             say hi, I&rsquo;ll try my best to get back to you!
           </p>
           <div>
