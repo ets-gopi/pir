@@ -35,10 +35,10 @@ section.projects > header > div > div {
   top: 50%;
 }
 section.projects > article.projectCard {
-  /* border: 1px solid rgb(174, 158, 13); */
+  border: 1px solid rgb(174, 158, 13);
   position: relative;
   padding: 10px;
-  margin: 30px 0px;
+  margin: 70px 0px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -47,6 +47,7 @@ section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
 }
 section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
   grid-column: 7/-1;
+  text-align: right;
 }
 
 section.projects > article.projectCard > figure {
@@ -154,7 +155,6 @@ section.projects > article.projectCard > div.cardContent > ul > li {
   margin: 10px;
 }
 section.projects > article.projectCard > div.cardContent > a {
-  text-align: end;
   padding-right: 10px;
   font-size: 25px;
 }
@@ -222,6 +222,7 @@ section.projects > article.projectCard > div.cardContent > a {
 
   section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
     grid-column: 1/-1;
+    text-align: left;
   }
 
   section.projects > article.projectCard > div.cardContent > div {
@@ -253,10 +254,10 @@ section.projects > article.projectCard > div.cardContent > a {
   }
   section.projects > article.projectCard > figure > div.overlay {
     background-color: #0c2034;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   section.projects article.projectCard:hover > figure > div.overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   section.projects > article.projectCard > div.cardContent {
     grid-area: 1 / 1 / -1 / -1;
@@ -265,6 +266,7 @@ section.projects > article.projectCard > div.cardContent > a {
 
   section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
     grid-column: 1/-1;
+    text-align: left;
   }
 
   section.projects > article.projectCard > div.cardContent > div {
@@ -293,10 +295,10 @@ section.projects > article.projectCard > div.cardContent > a {
   }
   section.projects > article.projectCard > figure > div.overlay {
     background-color: #0c2034;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   section.projects article.projectCard:hover > figure > div.overlay {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   section.projects > article.projectCard > div.cardContent > div {
     background-color: transparent;
@@ -309,6 +311,7 @@ section.projects > article.projectCard > div.cardContent > a {
 
   section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
     grid-column: 1 / -1;
+    text-align: left;
   }
   section.projects > article.projectCard > div.cardContent > ul {
     display: flex;
