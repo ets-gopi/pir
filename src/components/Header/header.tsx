@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { logo, defaultLogo } from "../../assets";
+import { resume } from "../../assets";
 import headerStyles from "./header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -74,7 +74,7 @@ const Header = () => {
               <li>
                 <a href="#contact">Contact</a>
               </li>
-              <Button value="Resume" />
+              <Button value="Resume" href={resume} />
             </ul>
           </nav>
         </div>

@@ -28,7 +28,7 @@ section.projects > header > div {
   padding-left: 20px;
 }
 section.projects > header > div > div {
-  width: 100%;
+  width: 50%;
   height: 0.5px;
   background-color: var(--color-text-primary);
   position: relative;
@@ -171,6 +171,9 @@ section.projects > article.projectCard > div.cardContent > a {
   section.projects > header > div {
     padding-left: 10px;
   }
+  section.projects > header > div > div {
+    width: 100%;
+  }
   section.projects > article.projectCard {
     padding: 0px;
   }
@@ -210,9 +213,13 @@ section.projects > article.projectCard > div.cardContent > a {
     /* border: 1px solid rgb(214, 217, 16); */
     padding: 10px 10px;
   }
+  section.projects > header > div > div {
+    width: 100%;
+  }
   section.projects > article.projectCard {
     padding: 0px;
   }
+
   section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
     grid-column: 1/-1;
   }
@@ -248,6 +255,9 @@ section.projects > article.projectCard > div.cardContent > a {
   section.projects {
     /* border: 1px solid rgb(47, 14, 235); */
     padding: 30px 30px;
+  }
+  section.projects > header > div > div {
+    width: 100%;
   }
   section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
     grid-column: 1/-1;

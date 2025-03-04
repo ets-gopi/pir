@@ -13,6 +13,7 @@
 #sidebar1 a {
   font-size: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 #sidebar1 a svg {
   transition: all 0.3s;
@@ -51,8 +52,9 @@
   transform: translateY(-2px);
 }
 
-@media (max-width:768px){
-    #sidebar1,#sidebar2{
-        display: none;
-    }
+@media (max-width: 768px) {
+  #sidebar1,
+  #sidebar2 {
+    display: none;
+  }
 }

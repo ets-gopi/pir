@@ -46,14 +46,14 @@
   counter-increment: list-counter;
 }
 
-#mainHeaderItem2 nav ul li a::before {
+#mainHeaderItem2 nav ul li > a::before {
   content: "0" counter(list-counter) ". ";
   font-weight: bold;
   margin-right: 5px;
   color: var(--color-text-highligth);
 }
 
-#mainHeaderItem2 nav ul li a {
+#mainHeaderItem2 nav ul li > a {
   display: block;
   text-decoration: none;
   /* border: 1px solid rgb(224, 12, 12); */
@@ -106,7 +106,7 @@
     display: block;
   }
 
-  #mainHeaderItem2 nav ul li a::before {
+  #mainHeaderItem2 nav ul li > a::before {
     display: block;
     margin-bottom: 5px;
   }

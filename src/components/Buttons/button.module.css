@@ -2,7 +2,7 @@
   /* background-color: #04aa6d; */
   background-color: transparent;
   border: 1px solid var(--color-text-highligth);
-  padding: 12px;
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -17,4 +17,12 @@
 .btn:hover {
   transform: translate(-4px, -4px);
   box-shadow: 4px 4px 0px 0px var(--color-text-highligth);
+}
+
+button.btn > a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 5px;
+  padding: 12px;
 }

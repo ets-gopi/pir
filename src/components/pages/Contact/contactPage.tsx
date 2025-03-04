@@ -15,7 +15,11 @@ const ContactPage = () => {
             say hi, I&rsquo;ll try my best to get back to you!
           </p>
           <div>
-            <Button value="Say Hello" />
+            {/* url :https://forms.gle/nJFTGzK8AwnjaCka7 */}
+            <Button
+              value="Say Hello"
+              href="https://forms.gle/nJFTGzK8AwnjaCka7"
+            />
           </div>
         </div>
       </section>
