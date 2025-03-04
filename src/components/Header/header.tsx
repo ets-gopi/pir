@@ -5,6 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Buttons/button";
 import Lader from "../Loader/loader";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 const Header = () => {
   const navBarRef = useRef<HTMLDivElement | null>(null);
@@ -52,10 +56,10 @@ const Header = () => {
         >
           <nav>
             <ul
-              onClick={() => {
+              onClick={(e: React.MouseEvent<HTMLUListElement>) => {
                 setIsMenuOpen(false);
                 document.body.classList.remove(headerStyles.no_scroll);
-                console.log("test");
+                console.log("test", e.target);
               }}
             >
               <li>
