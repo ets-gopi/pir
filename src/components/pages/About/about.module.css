@@ -302,3 +302,20 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     position: relative;
   }
 }
+
+@media (min-width: 1281px) and (max-width: 1537px) {
+  section.about {
+    border: 1px solid rgb(83, 17, 224);
+    padding-left: 180px;
+    padding-right: 200px;
+    padding-top: 150px;
+  }
+}
+@media (min-width: 1537px) and (max-width: 2000px) {
+  section.about {
+    border: 1px solid rgb(226, 7, 18);
+    padding-left: 350px;
+    padding-right: 200px;
+    padding-top: 150px;
+  }
+}

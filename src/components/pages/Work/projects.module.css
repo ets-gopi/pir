@@ -316,3 +316,20 @@ section.projects > article.projectCard > div.cardContent > a {
     top: 20%;
   }
 }
+
+@media (min-width: 1281px) and (max-width: 1537px) {
+  section.projects {
+    border: 1px solid rgb(45, 224, 17);
+    padding-left: 100px;
+    padding-right: 200px;
+    padding-top: 150px;
+  }
+}
+@media (min-width: 1537px) and (max-width: 2000px) {
+  section.projects {
+    border: 1px solid rgb(224, 58, 17);
+    padding-left: 250px;
+    padding-right: 200px;
+    padding-top: 150px;
+  }
+}

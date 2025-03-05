@@ -23,7 +23,7 @@ section.contact > div:first-child > h2 {
 }
 
 section.contact > div:first-child > p {
-  width: 30%;
+  width: 50%;
   line-height: 1.1;
   /* border: 1px solid rgb(16, 75, 224); */
   text-align: center;
@@ -71,7 +71,7 @@ section.contact > div:first-child > p {
 
 @media (min-width: 991px) and (max-width: 1199px) {
   section.contact {
-    /* border: 1px solid rgb(17, 224, 31); */
+    border: 1px solid rgb(224, 148, 17);
     padding-left: 50px;
     padding-right: 70px;
   }
@@ -81,3 +81,26 @@ section.contact > div:first-child > p {
 }
 
 /* 1536px, 1920px */
+@media (min-width: 1281px) and (max-width: 1537px) {
+  section.contact {
+    border: 1px solid rgb(17, 224, 31);
+    padding-left: 100px;
+    padding-right: 200px;
+    padding-top: 150px;
+  }
+  section.contact > div:first-child > p {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1537px) and (max-width: 2000px) {
+  section.contact {
+    border: 1px solid rgb(17, 224, 31);
+    padding-left: 250px;
+    padding-right: 200px;
+    padding-top: 150px;
+  }
+  section.contact > div:first-child > p {
+    width: 60%;
+  }
+}
