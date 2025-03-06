@@ -10,7 +10,6 @@ const Button = ({ value, href }: ButtonProps) => {
       <button className={buttonStyles.btn}>
         <a
           href={href}
-          target="_blank"
           rel="noopener noreferrer"
           {...(value === "Resume" && { download: "Resume.pdf" })}
         >

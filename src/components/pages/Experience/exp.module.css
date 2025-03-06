@@ -30,7 +30,7 @@ section.exp header > div {
   padding-left: 20px;
 }
 section.exp header > div > div {
-  width: 100%;
+  width: 50%;
   height: 0.5px;
   background-color: var(--color-text-primary);
   position: relative;
@@ -108,6 +108,9 @@ section.exp #expContent > ul > li::before {
   section.exp header > div {
     padding-left: 10px;
   }
+  section.exp header > div > div {
+    width: 100%;
+  }
   section.exp #expContent {
     padding-left: 0px;
     padding-top: 30px;
@@ -119,6 +122,9 @@ section.exp #expContent > ul > li::before {
     /* border: 1px solid rgb(58, 186, 29); */
     padding: 10px 10px;
   }
+  section.exp header > div > div {
+    width: 100%;
+  }
 
   section.exp #expContent {
     padding-left: 50px;
@@ -129,6 +135,9 @@ section.exp #expContent > ul > li::before {
   section.exp {
     /* border: 1px solid rgb(29, 186, 160); */
     padding: 30px 30px;
+  }
+  section.exp header > div > div {
+    width: 100%;
   }
 
   section.exp #expContent {
@@ -160,20 +169,20 @@ section.exp #expContent > ul > li::before {
   }
 }
 
-@media (min-width: 1281px) and (max-width: 1537px) {
+@media (min-width: 1281px) and (max-width: 1541px) {
   section.exp {
-    border: 1px solid rgb(17, 224, 31);
-    padding-left: 260px;
-    padding-right: 200px;
-    padding-top: 150px;
+    /* border: 1px solid rgb(17, 224, 31); */
+    padding-left: 25%;
+    padding-right: 10%;
+    padding-top: 5%;
   }
 }
 
-@media (min-width: 1537px) and (max-width: 2000px) {
+@media (min-width: 1541px) and (max-width: 2000px) {
   section.exp {
-    border: 1px solid rgb(226, 7, 18);
-    padding-left: 400px;
-    padding-right: 200px;
-    padding-top: 150px;
+    /* border: 1px solid rgb(226, 7, 18); */
+    padding-left: 30%;
+    padding-right: 15%;
+    padding-top: 10%;
   }
 }

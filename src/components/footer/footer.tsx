@@ -5,7 +5,7 @@ const Footer = () => {
     <React.Fragment>
       <footer id={footerPageStyles.footer}>
         Designed & Built by Gopi Muppuri <br />
-        &copy; 2025.All rights reserved.
+        &copy; 2025.
       </footer>
     </React.Fragment>
   );
