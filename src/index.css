@@ -43,9 +43,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 body {
   font-size: var(--font-size-body);
   background-color: var(--bg-color-primary);

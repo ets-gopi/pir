@@ -16,7 +16,7 @@ const HomePage = () => {
         creating visually appealing interfaces and collaborating with
         cross-functional teams to deliver high-quality solutions.
       </p>
-      <Button value="Explore" href="s" />
+      <Button value="Explore" href="#projects" />
     </section>
   );
 };

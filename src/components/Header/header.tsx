@@ -11,13 +11,22 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 const Header = () => {
-  const navBarRef = useRef<HTMLDivElement | null>(null);
+  const navBarRef = useRef<HTMLUListElement | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
   const toggleIsMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.classList.toggle(headerStyles.no_scroll);
   };
-  // Close navbar on window resize
+
+  const { contextSafe } = useGSAP({ scope: navBarRef });
+  const scrollToSection = contextSafe((hrefValue: string) => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: { y: hrefValue, offsetY: 50 },
+    });
+  });
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -28,8 +37,13 @@ const Header = () => {
         //console.log(document.body.classList.contains(headerStyles.no_scroll));
       }
     };
+    // Close navbar on window resize
     window.addEventListener("resize", handleResize);
-
+    if (window.location.hash) {
+      setTimeout(() => {
+        scrollToSection(window.location.hash);
+      }, 300);
+    }
     // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -50,17 +64,35 @@ const Header = () => {
           </figure>
         </div>
         <div
-          ref={navBarRef}
           id={headerStyles.mainHeaderItem2}
           className={isMenuOpen ? headerStyles.active : ""}
         >
           <nav>
             <ul
               onClick={(e: React.MouseEvent<HTMLUListElement>) => {
-                setIsMenuOpen(false);
-                document.body.classList.remove(headerStyles.no_scroll);
-                console.log("test", e.target);
+                const target = e.target as HTMLElement;
+
+                if (target.tagName === "A") {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.body.classList.remove(headerStyles.no_scroll);
+                  const hrefValue: string | null = target.getAttribute("href");
+                  console.log("href", hrefValue);
+                  if (hrefValue) {
+                    // Skip GSAP scrolling for external links
+                    if (
+                      hrefValue.includes(".pdf") ||
+                      hrefValue.startsWith("http")
+                    ) {
+                      window.open(hrefValue, "_blank");
+                      return;
+                    }
+                    window.history.pushState(null, "", hrefValue);
+                    scrollToSection(hrefValue);
+                  }
+                }
               }}
+              ref={navBarRef}
             >
               <li>
                 <a href="#about">About</a>
