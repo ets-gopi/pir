@@ -21,16 +21,16 @@ const AboutPage = () => {
               learned a lot about HTML and CSS.
             </div>
             <div>
-              Since then ,I&rsquo;ve worked at <span>a branding agency </span>{" "}
-              .. , <span>a startup </span>and{" "}
-              <span>an advertising company.</span> My main focus these days is
-              building accessible, inclusive products and digital experiences at{" "}
-              <span>Entitledarts</span> for a variety of clients.
+              Since then ,I&rsquo;ve worked at <span>a branding agency </span> ,{" "}
+              <span>a startup </span>and <span>an advertising company.</span> My
+              main focus these days is building accessible, inclusive products
+              and digital experiences at <span>Entitledarts</span> for a variety
+              of clients.
             </div>
             <div>
               Here are a few technologies I&rsquo;ve been working with recently:
               <ul>
-                <li>JavaScript (ES6+) </li>
+                <li>JavaScript (ES6+)</li>
                 <li>TypeScript</li>
                 <li> React </li>
                 <li>Node.js </li>

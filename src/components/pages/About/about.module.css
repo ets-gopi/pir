@@ -1,64 +1,67 @@
 section.about {
-  /* border: 1px solid rgb(197, 224, 17); */
+  border: 1px solid rgb(197, 224, 17);
   width: 90%;
   margin: 100px auto;
   padding: 30px 160px;
-  counter-reset: about-counter;
-}
-section.about header {
-  /* border: 1px solid rgb(197, 224, 17); */
-  display: flex;
-}
-section.about header > h2 {
-  counter-increment: about-counter;
-  font-family: var(--font-secondary);
-  font-weight: var(--font-weight);
-  color: var(--color-text-secondary);
-  /* border: 1px solid rgb(17, 20, 224); */
+  counter-reset: section-counter;
   position: relative;
-  font-size: 20px;
 }
-section.about header > h2::before {
-  content: "0" counter(about-counter) ".";
-  margin-right: 15px;
-  font-size: 18px;
-  color: var(--color-text-highligth);
+section.about > header {
+  border: 1px solid rgb(197, 224, 17);
+  display: flex;
+  position: relative;
+  font-weight: var(--font-weight);
+}
+section.about > header > h2 {
+  counter-increment: section-counter;
+  color: var(--lightest-slate);
+  position: relative;
+  font-size: clamp(26px, 2vw, var(--fz-heading));
+}
+section.about > header > h2::before {
+  content: "0" counter(section-counter) ".";
+  margin-right: 10px;
+  color: var(--green);
+  font-family: var(--font-secondary);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+  font-weight: 400;
 }
 
-section.about header > div {
-  /* border: 1px solid rgb(254, 9, 33); */
+section.about > header > div {
   flex-grow: 1;
-  padding-left: 20px;
+  padding-left: 10px;
 }
-section.about header > div > div {
+section.about > header > div > div {
   width: 50%;
   height: 0.5px;
-  background-color: var(--color-text-primary);
+  background-color: var(--slate);
   position: relative;
   top: 50%;
 }
 
-section.about #aboutContent {
-  /* border: 1px solid rgb(197, 224, 17); */
+section.about > #aboutContent {
+  border: 1px solid rgb(197, 224, 17);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 32px;
+  position: relative;
+  gap: 50px;
+  padding: 50px 0px;
 }
-section.about #aboutContent > div:first-child {
+section.about > #aboutContent > div {
+  border: 1px solid rgb(197, 224, 17);
+}
+section.about > #aboutContent > div:first-child {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   position: relative;
 }
 section.about #aboutContent > div:first-child > div {
-  /* border: 1px solid rgb(197, 224, 17); */
-  width: 80%;
-  padding: 0px 5px;
+  border: 1px solid rgb(197, 224, 17);
   line-height: 1.3;
   position: relative;
-  text-align: justify;
 }
 section.about #aboutContent > div:first-child > div:nth-child(2) > span {
   color: var(--color-text-highligth);
@@ -87,7 +90,6 @@ section.about
 
 section.about #aboutContent > div:first-child > div:nth-child(3) > ul {
   list-style-type: none;
-  /* border: 1px solid rgb(12, 224, 12); */
   margin: 5px 0px;
   padding: 0;
   display: grid;
@@ -172,12 +174,6 @@ section.about
 section.about #aboutContent > div:last-child figure:hover div.rectangle {
   transform: translate(4px, 4px);
 }
-
-/* section.about #aboutContent {
-  width:300px;
-  height:300px;
-  border-radius: 5px;
-} */
 
 @media (max-width: 400px) {
   section.about {

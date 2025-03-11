@@ -23,7 +23,7 @@ const Header = () => {
   const scrollToSection = contextSafe((hrefValue: string) => {
     gsap.to(window, {
       duration: 2,
-      scrollTo: { y: hrefValue, offsetY: 50 },
+      scrollTo: { y: hrefValue, offsetY: 80 },
     });
   });
 
@@ -51,10 +51,14 @@ const Header = () => {
   }, []);
   return (
     <React.Fragment>
-      <header id={headerStyles.mainHeader} className={headerStyles.mainHeader}>
+      <header
+        id={headerStyles.mainHeader}
+        className={`${headerStyles.mainHeader} ${
+          isMenuOpen && headerStyles.unactive
+        }`}
+      >
         <div id={headerStyles.mainHeaderItem1}>
           <figure>
-            {/* <img src={logo} alt="gd_logo" /> */}
             <Lader
               style={{
                 display: "flex",
@@ -106,7 +110,9 @@ const Header = () => {
               <li>
                 <a href="#contact">Contact</a>
               </li>
-              <Button value="Resume" href={resume} />
+              <div>
+                <Button value="Resume" href={resume} />
+              </div>
             </ul>
           </nav>
         </div>

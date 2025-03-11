@@ -5,9 +5,12 @@
   align-items: center;
   width: 90%;
   margin: auto;
-  /* position: sticky;
+  background-color: rgba(10, 25, 47, 0.85);
+  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+  position: sticky;
   top: 0px;
-  z-index: 1002; */
+  z-index: 1002;
+  backdrop-filter: blur(10px);
 }
 #mainHeaderItem1 {
   /* border: 1px solid rgb(198, 9, 154); */
@@ -24,11 +27,6 @@
   display: none;
 }
 
-/* #mainHeaderItem1 figure img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-} */
 
 #mainHeaderItem2 nav ul {
   list-style-type: none;
@@ -45,6 +43,9 @@
   /* border: 1px solid rgb(62, 12, 224); */
   counter-increment: list-counter;
 }
+#mainHeaderItem2 nav ul > div {
+  display: inline-block;
+}
 
 #mainHeaderItem2 nav ul li > a::before {
   content: "0" counter(list-counter) ". ";
@@ -58,7 +59,7 @@
   text-decoration: none;
   /* border: 1px solid rgb(224, 12, 12); */
   padding: 32px 16px;
-  color: var(--color-text-primary);
+  color: var(--lightest-slate);
 }
 
 .no_scroll {
@@ -76,9 +77,9 @@
   #mainHeader {
     justify-content: space-between;
   }
-  /* #mainHeaderItem1 figure img {
-    margin-top: 5px;
-  } */
+  #mainHeader.unactive{
+    backdrop-filter: none;
+  }
   #mainHeaderItem2 {
     display: none;
     position: fixed;
@@ -86,25 +87,44 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 10;
+    z-index: 999;
     text-align: start;
-    background-color: rgb(5, 5, 5, 0.5);
+    /* border: 1px solid rgb(48, 10, 216); */
+    background-color: var(--bg-color-primary);
   }
   #mainHeaderItem2.active {
     display: block;
   }
   #mainHeaderItem2 nav {
-    background-color: var(--bg-color-primary);
-    width: 70%;
+    width: 100%;
     height: 100%;
     /* border: 1px solid rgb(58, 224, 12); */
+    position: relative;
   }
   #mainHeaderItem2 nav ul {
     text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
-  #mainHeaderItem2 nav ul li {
+  #mainHeaderItem2 nav ul > li {
+    background-color: var(--light-navy);
     display: block;
+    /* border: 1px solid rgb(198, 192, 9); */
+    height: 20%;
   }
+  #mainHeaderItem2 nav ul > div {
+    background-color: var(--light-navy);
+    display: block;
+    /* border: 1px solid rgb(198, 192, 9); */
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* #mainHeaderItem2 nav ul > li:nth-child(1) {
+    animation: slide 0.4s linear 0.1s both;
+  } */
 
   #mainHeaderItem2 nav ul li > a::before {
     display: block;
@@ -119,5 +139,14 @@
     color: var(--color-text-highligth);
     cursor: pointer;
     z-index: 1000;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }

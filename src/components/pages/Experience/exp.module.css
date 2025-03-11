@@ -10,7 +10,7 @@ section.exp header {
   display: flex;
 }
 section.exp header h2 {
-  counter-increment: about-counter;
+  counter-increment: section-counter;
   font-family: var(--font-secondary);
   font-weight: var(--font-weight);
   color: var(--color-text-secondary);
@@ -19,7 +19,7 @@ section.exp header h2 {
   font-size: 20px;
 }
 section.exp header h2::before {
-  content: "0" counter(about-counter) ".";
+  content: "0" counter(section-counter) ".";
   margin-right: 15px;
   font-size: 18px;
   color: var(--color-text-highligth);
