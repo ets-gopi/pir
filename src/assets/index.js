@@ -6,6 +6,7 @@ import hatimi from "./luxury-bedroom.jpg";
 import hatimi1 from "./hatimi1.png";
 import blockchain from "./blockchain.jpg";
 import resume from "./updateResume.pdf";
+import certificateIcon from "./certificate.svg";
 export {
   logo,
   image,
@@ -15,4 +16,5 @@ export {
   blockchain,
   hatimi1,
   resume,
+  certificateIcon,
 };

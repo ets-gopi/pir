@@ -17,6 +17,7 @@ import ProjectsPage from "./components/pages/Work/projectsPage";
 import ExpPage from "./components/pages/Experience/expriencePage";
 import ContactPage from "./components/pages/Contact/contactPage";
 import Lader from "./components/Loader/loader";
+import CertificatePage from "./components/pages/Certificate/certificatePage";
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
             <AboutPage />
             <ExpPage />
             <ProjectsPage />
+            <CertificatePage />
             <ContactPage />
           </main>
           <Footer />
