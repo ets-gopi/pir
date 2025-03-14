@@ -80,3 +80,9 @@ body {
     no-repeat center;
   height: 10px;
 }
+
+@media (max-width: 400px) {
+  body {
+    font-size: var(--fz-lg);
+  }
+}

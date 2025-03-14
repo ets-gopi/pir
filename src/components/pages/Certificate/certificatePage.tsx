@@ -3,17 +3,13 @@ import certificatesStyles from "./certificate.module.css";
 
 import certificatesData from "./certificatesInfo";
 import CertificateItem from "./certificateItem";
+import DefaultSectionHeader from "../DefaultSectionHeader/defaultSectionHeader";
 
 const CertificatePage = () => {
   return (
     <React.Fragment>
       <section id="certificates" className={certificatesStyles.certificates}>
-        <header>
-          <h2>Certificates</h2>
-          <div>
-            <div></div>
-          </div>
-        </header>
+        <DefaultSectionHeader value="Certificates" />
         <div id={certificatesStyles.certificatesContainer}>
           {certificatesData.map((obj, ind) => {
             return (

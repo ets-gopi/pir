@@ -1,5 +1,5 @@
 section.about {
-  border: 1px solid rgb(197, 224, 17);
+  /* border: 1px solid rgb(197, 224, 17); */
   width: 90%;
   margin: 100px auto;
   padding: 30px 160px;
@@ -7,7 +7,7 @@ section.about {
   position: relative;
 }
 section.about > header {
-  border: 1px solid rgb(197, 224, 17);
+  /* border: 1px solid rgb(197, 224, 17); */
   display: flex;
   position: relative;
   font-weight: var(--font-weight);
@@ -40,7 +40,7 @@ section.about > header > div > div {
 }
 
 section.about > #aboutContent {
-  border: 1px solid rgb(197, 224, 17);
+  /* border: 1px solid rgb(197, 224, 17); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,26 +50,31 @@ section.about > #aboutContent {
   padding: 50px 0px;
 }
 section.about > #aboutContent > div {
-  border: 1px solid rgb(197, 224, 17);
+  /* border: 1px solid rgb(197, 224, 17); */
+  position: relative;
 }
 section.about > #aboutContent > div:first-child {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   position: relative;
 }
-section.about #aboutContent > div:first-child > div {
-  border: 1px solid rgb(197, 224, 17);
+section.about > #aboutContent > div:first-child > div {
+  /* border: 1px solid rgb(197, 224, 17); */
   line-height: 1.3;
   position: relative;
 }
-section.about #aboutContent > div:first-child > div:nth-child(2) > span {
+section.about > #aboutContent > div:first-child > div:nth-child(2) > span {
   color: var(--color-text-highligth);
   transition: color 0.3s;
   position: relative;
   cursor: pointer;
 }
-section.about #aboutContent > div:first-child > div:nth-child(2) > span::after {
+section.about
+  > #aboutContent
+  > div:first-child
+  > div:nth-child(2)
+  > span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -81,23 +86,28 @@ section.about #aboutContent > div:first-child > div:nth-child(2) > span::after {
 }
 
 section.about
-  #aboutContent
+  > #aboutContent
   > div:first-child
   > div:nth-child(2)
   > span:hover::after {
   width: 100%;
 }
 
-section.about #aboutContent > div:first-child > div:nth-child(3) > ul {
+section.about > #aboutContent > div:first-child > div:nth-child(3) > ul {
+  /* border: 1px solid rgb(197, 224, 17); */
   list-style-type: none;
-  margin: 5px 0px;
+  margin: 10px 0px;
   padding: 0;
+  font-family: var(--font-secondary);
+  font-size: var(--fz-xs);
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 20px;
+  position: relative;
+  width: 70%;
 }
 section.about
-  #aboutContent
+  > #aboutContent
   > div:first-child
   > div:nth-child(3)
   > ul
@@ -113,19 +123,19 @@ section.about
   position: relative;
   top: -4px;
 }
-section.about #aboutContent > div:last-child figure {
+section.about > #aboutContent > div:last-child > figure {
   width: 270px;
   height: 270px;
   position: relative;
 }
-section.about #aboutContent > div:last-child figure div.rectangle {
+section.about > #aboutContent > div:last-child > figure > div.rectangle {
   border: 3px solid var(--color-text-highligth);
   width: 100%;
   height: 100%;
   border-radius: 3px;
   transition: all 0.3s;
 }
-section.about #aboutContent > div:last-child figure div.imageContainer {
+section.about > #aboutContent > div:last-child > figure > div.imageContainer {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -133,18 +143,23 @@ section.about #aboutContent > div:last-child figure div.imageContainer {
   transform: translate(-15px, -15px);
   transition: all 0.3s;
 }
-section.about #aboutContent > div:last-child figure div.imageContainer img {
+section.about
+  > #aboutContent
+  > div:last-child
+  > figure
+  > div.imageContainer
+  > img {
   width: 100%;
   height: 100%;
   border-radius: 3px;
   transition: all 0.3s;
 }
 section.about
-  #aboutContent
+  > #aboutContent
   > div:last-child
-  figure
-  div.imageContainer
-  div.overlay {
+  > figure
+  > div.imageContainer
+  > div.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -155,58 +170,44 @@ section.about
   border-radius: 3px;
 }
 section.about
-  #aboutContent
+  > #aboutContent
   > div:last-child
-  figure:hover
-  div.imageContainer
-  div.overlay {
+  > figure:hover
+  > div.imageContainer
+  > div.overlay {
   opacity: 0;
 }
 
 section.about
-  #aboutContent
+  > #aboutContent
   > div:last-child
-  figure:hover
-  div.imageContainer
-  img {
+  > figure:hover
+  > div.imageContainer
+  > img {
   transform: translate(-4px, -4px);
 }
-section.about #aboutContent > div:last-child figure:hover div.rectangle {
+section.about > #aboutContent > div:last-child > figure:hover > div.rectangle {
   transform: translate(4px, 4px);
 }
 
 @media (max-width: 400px) {
   section.about {
     /* border: 1px solid rgb(224, 17, 55); */
-    padding: 20px 20px;
+    padding: 0px;
+  }
+  section.about > header > div > div {
     width: 100%;
   }
-  section.about header h2 {
-    font-size: 18px;
-  }
-  section.about header h2::before {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-  section.about header > div {
-    padding-left: 10px;
-  }
-  section.about header > div > div {
-    width: 100%;
-  }
-  section.about #aboutContent {
+  section.about > #aboutContent {
     flex-direction: column;
     gap: 100px;
-    padding: 30px 0px;
+    padding: 50px 0px;
   }
-  section.about #aboutContent > div:first-child > div {
-    width: 100%;
-  }
-  section.about #aboutContent > div:first-child > div:nth-child(3) > ul {
+  section.about > #aboutContent > div:first-child > div:nth-child(3) > ul {
     grid-template-columns: auto;
     gap: 15px;
   }
-  section.about #aboutContent > div:last-child figure {
+  section.about > #aboutContent > div:last-child > figure {
     width: 200px;
     height: 200px;
     position: relative;
@@ -214,8 +215,9 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
 }
 @media (min-width: 400px) and (max-width: 576px) {
   section.about {
-    /* border: 1px solid rgb(224, 17, 55); */
-    padding: 10px 10px;
+    /* border: 1px solid rgb(41, 17, 224); */
+    padding: 0px;
+    margin: 200px auto;
   }
   section.about header > div > div {
     width: 100%;
@@ -224,10 +226,7 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
   section.about #aboutContent {
     flex-direction: column;
     gap: 100px;
-    padding: 32px 10px;
-  }
-  section.about #aboutContent > div:first-child > div {
-    width: 100%;
+    padding: 50px 0px;
   }
   section.about #aboutContent > div:last-child figure {
     width: 250px;
@@ -235,10 +234,10 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     position: relative;
   }
 }
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 769px) {
   section.about {
-    /* border: 1px solid rgb(224, 17, 55); */
-    padding: 30px 30px;
+    /* border: 1px solid rgb(17, 224, 176); */
+    padding: 0px;
   }
   section.about header > div > div {
     width: 100%;
@@ -246,10 +245,7 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
   section.about #aboutContent {
     flex-direction: column;
     gap: 100px;
-    padding: 32px 10px;
-  }
-  section.about #aboutContent > div:first-child > div {
-    width: 100%;
+    padding: 50px 0px;
   }
   section.about #aboutContent > div:last-child figure {
     width: 250px;
@@ -257,22 +253,19 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     position: relative;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 991px) {
   section.about {
     /* border: 1px solid rgb(20, 224, 17); */
     padding-left: 100px;
     padding-right: 70px;
   }
 
-  section.about #aboutContent {
+  section.about > #aboutContent {
     flex-direction: column;
     gap: 50px;
     padding: 32px 10px;
   }
-  section.about #aboutContent > div:first-child > div {
-    width: 100%;
-  }
-  section.about #aboutContent > div:last-child figure {
+  section.about #aboutContent > div:last-child > figure {
     width: 250px;
     height: 250px;
     position: relative;
@@ -285,14 +278,11 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     padding-left: 140px;
     padding-right: 70px;
   }
-  section.about #aboutContent {
+  section.about > #aboutContent {
     gap: 50px;
     padding: 32px 10px;
   }
-  section.about #aboutContent > div:first-child > div {
-    width: 100%;
-  }
-  section.about #aboutContent > div:last-child figure {
+  section.about > #aboutContent > div:last-child > figure {
     width: 200px;
     height: 200px;
     position: relative;
@@ -305,6 +295,9 @@ section.about #aboutContent > div:last-child figure:hover div.rectangle {
     padding-left: 20%;
     padding-right: 10%;
     padding-top: 5%;
+  }
+  section.about > #aboutContent > div:first-child > div:nth-child(3) > ul {
+    width: 80%;
   }
 }
 @media (min-width: 1541px) and (max-width: 2000px) {

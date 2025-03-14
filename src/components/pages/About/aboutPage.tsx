@@ -1,17 +1,13 @@
 import React from "react";
 import aboutPageStyles from "./about.module.css";
 import { image2 } from "../../../assets";
+import DefaultSectionHeader from "../DefaultSectionHeader/defaultSectionHeader";
 
 const AboutPage = () => {
   return (
     <React.Fragment>
       <section id="about" className={aboutPageStyles.about}>
-        <header>
-          <h2>About Me</h2>
-          <div>
-            <div></div>
-          </div>
-        </header>
+        <DefaultSectionHeader value="About Me" />
         <div id={aboutPageStyles.aboutContent}>
           <div>
             <div>
@@ -21,11 +17,11 @@ const AboutPage = () => {
               learned a lot about HTML and CSS.
             </div>
             <div>
-              Since then ,I&rsquo;ve worked at <span>a branding agency </span> ,{" "}
-              <span>a startup </span>and <span>an advertising company.</span> My
-              main focus these days is building accessible, inclusive products
-              and digital experiences at <span>Entitledarts</span> for a variety
-              of clients.
+              Fast-forward to today, and I&rsquo;ve had the privilege of working
+              at <span>a branding agency </span> , <span>a startup </span> and{" "}
+              <span>an advertising company.</span> My main focus these days is
+              building accessible, inclusive products and digital experiences at{" "}
+              <span>Entitledarts</span> for a variety of clients.
             </div>
             <div>
               Here are a few technologies I&rsquo;ve been working with recently:

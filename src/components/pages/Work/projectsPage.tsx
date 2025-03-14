@@ -4,16 +4,13 @@ import { projectsdata } from "./projectsinfo";
 import Link from "../../Links/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import DefaultSectionHeader from "../DefaultSectionHeader/defaultSectionHeader";
 const ProjectsPage = () => {
   return (
     <React.Fragment>
       <section id="projects" className={projectsPageStyles.projects}>
-        <header>
-          <h2>Some Things I&rsquo;ve Built</h2>
-          <div>
-            <div></div>
-          </div>
-        </header>
+        <DefaultSectionHeader value="Some Things I&rsquo;ve Built" />
+
         {projectsdata?.map((obj, ind) => {
           return (
             <article key={ind} className={`${projectsPageStyles.projectCard}`}>

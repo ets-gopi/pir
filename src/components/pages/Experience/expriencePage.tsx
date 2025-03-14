@@ -1,15 +1,11 @@
 import React from "react";
 import expPageStyles from "./exp.module.css";
+import DefaultSectionHeader from "../DefaultSectionHeader/defaultSectionHeader";
 const ExpPage = () => {
   return (
     <React.Fragment>
       <section id="exp" className={expPageStyles.exp}>
-        <header>
-          <h2>Where I&rsquo;ve Worked</h2>
-          <div>
-            <div></div>
-          </div>
-        </header>
+        <DefaultSectionHeader value="Where I&rsquo;ve Worked" />
         <div id={expPageStyles.expContent}>
           <>
             <span>
