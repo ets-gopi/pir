@@ -38,9 +38,9 @@ section.certificates > header > div > div {
 
 section.certificates > #certificatesContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
-  gap: 20px;
+  gap: 30px;
   padding: 50px 0px;
 }
 section.certificates > #certificatesContainer > div.certificatesItem {
@@ -61,8 +61,14 @@ section.certificates
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-bottom: 45px;
-
-  color: var(--lightest-slate);
+}
+section.certificates
+  > #certificatesContainer
+  > div.certificatesItem
+  > a
+  > div.icon
+  > img {
+  background-color: #0c2034;
 }
 
 section.certificates
@@ -75,7 +81,7 @@ section.certificates
   position: relative;
   width: 80px;
   height: 80px;
-  background: linear-gradient(45deg, var(--light-slate) 50%, var(--navy) 50%);
+  background: linear-gradient(45deg, var(--dark-navy) 50%, var(--navy) 50%);
 }
 section.certificates
   > #certificatesContainer

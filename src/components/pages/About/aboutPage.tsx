@@ -1,6 +1,6 @@
 import React from "react";
 import aboutPageStyles from "./about.module.css";
-import { image2 } from "../../../assets";
+import { image, image2 } from "../../../assets";
 import DefaultSectionHeader from "../DefaultSectionHeader/defaultSectionHeader";
 
 const AboutPage = () => {
@@ -39,7 +39,7 @@ const AboutPage = () => {
             <figure>
               <div className={aboutPageStyles.rectangle}></div>
               <div className={aboutPageStyles.imageContainer}>
-                <img src={image2} alt="" />
+                <img src={image} alt="" />
                 <div className={aboutPageStyles.overlay}></div>
               </div>
             </figure>

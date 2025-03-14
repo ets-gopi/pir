@@ -25,7 +25,7 @@ const HomePage = () => {
         </p>
       </div>
       <div>
-        <Button value="Explore" href="#projects" />
+        <Button value="Explore" href="#certificates" />
       </div>
     </section>
   );

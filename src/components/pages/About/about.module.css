@@ -124,8 +124,8 @@ section.about
   top: -4px;
 }
 section.about > #aboutContent > div:last-child > figure {
-  width: 270px;
-  height: 270px;
+  width: 280px;
+  height: 280px;
   position: relative;
 }
 section.about > #aboutContent > div:last-child > figure > div.rectangle {
