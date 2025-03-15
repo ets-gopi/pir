@@ -1,46 +1,49 @@
 section.projects {
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   width: 90%;
   margin: 100px auto;
   padding: 30px 100px;
-}
-section.projects header {
-  /* border: 1px solid rgb(13, 174, 26); */
-  display: flex;
-}
-section.projects header h2 {
-  counter-increment: section-counter;
-  font-family: var(--font-secondary);
-  font-weight: var(--font-weight);
-  color: var(--color-text-secondary);
-  font-size: 20px;
   position: relative;
 }
-section.projects header h2::before {
+section.projects > header {
+  border: 1px solid rgb(13, 174, 26);
+  display: flex;
+  position: relative;
+  font-weight: var(--font-weight);
+}
+section.projects > header > h2 {
+  counter-increment: section-counter;
+  color: var(--lightest-slate);
+  position: relative;
+  font-size: clamp(26px, 2vw, var(--fz-heading));
+}
+section.projects > header > h2::before {
   content: "0" counter(section-counter) ".";
-  margin-right: 15px;
-  font-size: 18px;
-  color: var(--color-text-highligth);
+  margin-right: 10px;
+  color: var(--green);
+  font-family: var(--font-secondary);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+  font-weight: 400;
 }
 section.projects > header > div {
-  /* border: 1px solid rgb(254, 9, 33); */
   flex-grow: 1;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 section.projects > header > div > div {
   width: 50%;
   height: 0.5px;
-  background-color: var(--color-text-primary);
+  background-color: var(--slate);
   position: relative;
   top: 50%;
 }
 section.projects > article.projectCard {
-  /* border: 1px solid rgb(174, 158, 13); */
+  border: 1px solid rgb(13, 174, 26);
   position: relative;
   padding: 10px;
   margin: 70px 0px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  font-size: var(--fz-lg);
 }
 section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
   grid-column: 1/8;
@@ -56,7 +59,7 @@ section.projects > article.projectCard > figure {
   position: relative;
   z-index: 1;
   grid-area: 1 / 6 / -1 / -1;
-  /* border: 1px solid rgb(174, 158, 13); */
+  border: 1px solid rgb(13, 174, 26);
 }
 
 section.projects > article.projectCard > figure > img {
@@ -64,7 +67,7 @@ section.projects > article.projectCard > figure > img {
   height: 100%;
   border-radius: 3px;
   transition: all 0.3s;
-  /* border: 1px solid red; */
+  border: 1px solid rgb(13, 174, 26);
 }
 section.projects > article.projectCard > figure > div.overlay {
   position: absolute;
@@ -82,7 +85,7 @@ section.projects > article.projectCard > figure:hover > div.overlay {
 }
 
 section.projects > article.projectCard > div.cardContent {
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   z-index: 2;
   position: relative;
   grid-area: 1 / 1 / -1 / 7;
@@ -92,21 +95,21 @@ section.projects > article.projectCard > div.cardContent {
 }
 section.projects > article.projectCard > div.cardContent > p {
   color: var(--color-text-highligth);
-  font-size: 13px;
+  font-size: var(--fz-xs);
   margin-top: 70px;
 }
 
 section.projects > article.projectCard > div.cardContent > h4 {
-  color: var(--color-text-secondary);
-  font-size: 20px;
+  color: var(--lightest-slate);
+  font-size: 28px;
 }
 section.projects > article.projectCard > div.cardContent > div {
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   background-color: #112240;
   border-radius: 5px;
   padding: 15px;
-  font-size: 14px;
   position: relative;
+  line-height: 1.3;
 }
 section.projects > article.projectCard > div.cardContent > div > span {
   color: var(--color-text-highligth);
@@ -134,10 +137,10 @@ section.projects
 
 section.projects > article.projectCard > div.cardContent > ul {
   list-style-type: none;
-  /* border: 1px solid rgb(13, 174, 26); */
+  border: 1px solid rgb(13, 174, 26);
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: var(--fz-xs);
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -156,7 +159,7 @@ section.projects > article.projectCard > div.cardContent > a {
 
 @media (max-width: 400px) {
   section.projects {
-    /* border: 1px solid rgb(245, 11, 54); */
+    border: 1px solid rgb(245, 11, 54);
     padding: 20px 20px;
     width: 100%;
   }
@@ -210,7 +213,7 @@ section.projects > article.projectCard > div.cardContent > a {
 }
 @media (min-width: 400px) and (max-width: 576px) {
   section.projects {
-    /* border: 1px solid rgb(214, 217, 16); */
+    border: 1px solid rgb(214, 217, 16);
     padding: 10px 10px;
   }
   section.projects > header > div > div {
@@ -251,9 +254,9 @@ section.projects > article.projectCard > div.cardContent > a {
     justify-content: start;
   }
 }
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 769px) {
   section.projects {
-    /* border: 1px solid rgb(47, 14, 235); */
+    border: 1px solid rgb(47, 14, 235);
     padding: 30px 30px;
   }
   section.projects > header > div > div {
@@ -289,9 +292,9 @@ section.projects > article.projectCard > div.cardContent > a {
     justify-content: start;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 991px) {
   section.projects {
-    /* border: 1px solid rgb(235, 14, 198); */
+    border: 1px solid rgb(235, 14, 198);
     padding-left: 50px;
     padding-right: 70px;
   }
@@ -305,7 +308,7 @@ section.projects > article.projectCard > div.cardContent > a {
 
 @media (min-width: 991px) and (max-width: 1199px) {
   section.projects {
-    /* border: 1px solid rgb(224, 58, 17); */
+    border: 1px solid rgb(224, 58, 17);
     padding-left: 50px;
     padding-right: 70px;
   }
@@ -319,15 +322,16 @@ section.projects > article.projectCard > div.cardContent > a {
 
 @media (min-width: 1281px) and (max-width: 1541px) {
   section.projects {
-    /* border: 1px solid rgb(45, 224, 17); */
+    border: 1px solid rgb(17, 224, 34);
     padding-left: 15%;
     padding-right: 10%;
     padding-top: 5%;
   }
+
 }
 @media (min-width: 1541px) and (max-width: 2000px) {
   section.projects {
-    /* border: 1px solid rgb(224, 58, 17); */
+    border: 1px solid rgb(224, 58, 17);
     padding-left: 20%;
     padding-right: 15%;
     padding-top: 10%;
