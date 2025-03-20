@@ -23,7 +23,7 @@ const Header = () => {
   const scrollToSection = contextSafe((hrefValue: string) => {
     gsap.to(window, {
       duration: 2,
-      scrollTo: { y: hrefValue, offsetY: 80 },
+      scrollTo: { y: hrefValue, offsetY: 120 },
     });
   });
 
