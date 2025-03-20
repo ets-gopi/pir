@@ -42,7 +42,7 @@ function App() {
             <AboutPage />
             <ExpPage />
             <ProjectsPage />
-            <CertificatePage />
+            {/* <CertificatePage /> */}
             <ContactPage />
           </main>
           <Footer />

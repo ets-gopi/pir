@@ -109,7 +109,7 @@ section.exp > #expContent > ul > li::before {
     width: 100%;
   }
   section.exp > #expContent {
-    padding-left: 10px;
+    padding-left: 0px;
     padding-top: 50px;
   }
   section.exp > #expContent > ul {
@@ -147,7 +147,7 @@ section.exp > #expContent > ul > li::before {
   }
 
   section.exp > #expContent {
-    padding-left: 32px;
+    padding-left: 0px;
     padding-top: 64px;
   }
 }

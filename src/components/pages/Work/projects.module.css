@@ -1,12 +1,12 @@
 section.projects {
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   width: 90%;
   margin: 100px auto;
   padding: 30px 100px;
   position: relative;
 }
 section.projects > header {
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   display: flex;
   position: relative;
   font-weight: var(--font-weight);
@@ -37,7 +37,7 @@ section.projects > header > div > div {
   top: 50%;
 }
 section.projects > article.projectCard {
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   position: relative;
   padding: 10px;
   margin: 70px 0px;
@@ -49,7 +49,7 @@ section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
   grid-column: 1/8;
 }
 section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
-  grid-column: 7/-1;
+  grid-column: 6/-1;
   text-align: right;
 }
 
@@ -59,7 +59,7 @@ section.projects > article.projectCard > figure {
   position: relative;
   z-index: 1;
   grid-area: 1 / 6 / -1 / -1;
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
 }
 
 section.projects > article.projectCard > figure > img {
@@ -67,7 +67,7 @@ section.projects > article.projectCard > figure > img {
   height: 100%;
   border-radius: 3px;
   transition: all 0.3s;
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
 }
 section.projects > article.projectCard > figure > div.overlay {
   position: absolute;
@@ -85,26 +85,28 @@ section.projects > article.projectCard > figure:hover > div.overlay {
 }
 
 section.projects > article.projectCard > div.cardContent {
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   z-index: 2;
   position: relative;
-  grid-area: 1 / 1 / -1 / 7;
+  grid-area: 1 / 1 / -1 / 8;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
 }
 section.projects > article.projectCard > div.cardContent > p {
   color: var(--color-text-highligth);
   font-size: var(--fz-xs);
   margin-top: 70px;
+  line-height: 1.3;
 }
 
 section.projects > article.projectCard > div.cardContent > h4 {
   color: var(--lightest-slate);
-  font-size: 28px;
+  font-size: 26px;
+  line-height: 1.1;
 }
 section.projects > article.projectCard > div.cardContent > div {
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   background-color: #112240;
   border-radius: 5px;
   padding: 15px;
@@ -137,7 +139,7 @@ section.projects
 
 section.projects > article.projectCard > div.cardContent > ul {
   list-style-type: none;
-  border: 1px solid rgb(13, 174, 26);
+  /* border: 1px solid rgb(13, 174, 26); */
   margin: 0;
   padding: 0;
   font-size: var(--fz-xs);
@@ -145,9 +147,11 @@ section.projects > article.projectCard > div.cardContent > ul {
   flex-direction: row;
   gap: 5px;
   flex-wrap: wrap;
+  line-height: 1.3;
 }
 section.projects > article.projectCard > div.cardContent > a {
   font-size: 25px;
+  margin-bottom: 70px;
 }
 
 .even {
@@ -159,29 +163,21 @@ section.projects > article.projectCard > div.cardContent > a {
 
 @media (max-width: 400px) {
   section.projects {
-    border: 1px solid rgb(245, 11, 54);
-    padding: 20px 20px;
-    width: 100%;
-  }
-  section.projects > header h2::before {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-
-  section.projects > header > h2 {
-    font-size: 18px;
-  }
-  section.projects > header > div {
-    padding-left: 10px;
+    /* border: 1px solid rgb(245, 11, 54); */
+    padding: 0px;
   }
   section.projects > header > div > div {
     width: 100%;
   }
   section.projects > article.projectCard {
-    padding: 0px;
+    padding: 0px 10px;
   }
   section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
     grid-column: 1/-1;
+  }
+  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+    grid-column: 1 / -1;
+    text-align: left;
   }
   section.projects > article.projectCard > figure {
     grid-area: 1 / 1 / -1 / -1;
@@ -193,38 +189,46 @@ section.projects > article.projectCard > div.cardContent > a {
   section.projects article.projectCard:hover > figure > div.overlay {
     opacity: 0.9;
   }
+
   section.projects > article.projectCard > div.cardContent {
     grid-area: 1 / 1 / -1 / -1;
-    padding: 10px 15px;
+    padding: 0px 30px;
   }
-
-  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
-    grid-column: 1/-1;
-    text-align: left;
-  }
-
   section.projects > article.projectCard > div.cardContent > div {
     background-color: transparent;
     padding: 0px;
   }
+
   section.projects > article.projectCard > div.cardContent > ul {
     justify-content: start;
+  }
+  section.projects > article.projectCard > div.cardContent > a {
+    margin-bottom: 20px;
+  }
+  section.projects > article.projectCard > div.cardContent > p {
+    margin-top: 20px;
+  }
+  section.projects > article.projectCard > div.cardContent > h4 {
+    font-size: 21px;
   }
 }
 @media (min-width: 400px) and (max-width: 576px) {
   section.projects {
-    border: 1px solid rgb(214, 217, 16);
-    padding: 10px 10px;
+    /* border: 1px solid rgb(214, 217, 16); */
+    padding: 0px;
   }
   section.projects > header > div > div {
     width: 100%;
   }
   section.projects > article.projectCard {
-    padding: 0px;
+    padding: 0px 10px;
   }
-
   section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
     grid-column: 1/-1;
+  }
+  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+    grid-column: 1 / -1;
+    text-align: left;
   }
   section.projects > article.projectCard > figure {
     grid-area: 1 / 1 / -1 / -1;
@@ -236,34 +240,40 @@ section.projects > article.projectCard > div.cardContent > a {
   section.projects article.projectCard:hover > figure > div.overlay {
     opacity: 0.9;
   }
+
   section.projects > article.projectCard > div.cardContent {
     grid-area: 1 / 1 / -1 / -1;
-    padding: 30px 0px;
+    padding: 0px 30px;
   }
-
-  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
-    grid-column: 1/-1;
-    text-align: left;
-  }
-
   section.projects > article.projectCard > div.cardContent > div {
     background-color: transparent;
     padding: 0px;
   }
+
   section.projects > article.projectCard > div.cardContent > ul {
     justify-content: start;
+  }
+  section.projects > article.projectCard > div.cardContent > h4 {
+    font-size: 25px;
   }
 }
 @media (min-width: 576px) and (max-width: 769px) {
   section.projects {
     border: 1px solid rgb(47, 14, 235);
-    padding: 30px 30px;
+    padding: 0px;
   }
   section.projects > header > div > div {
     width: 100%;
   }
+  section.projects > article.projectCard {
+    padding: 0px 30px;
+  }
   section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
     grid-column: 1/-1;
+  }
+  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+    grid-column: 1 / -1;
+    text-align: left;
   }
   section.projects > article.projectCard > figure {
     grid-area: 1 / 1 / -1 / -1;
@@ -275,19 +285,19 @@ section.projects > article.projectCard > div.cardContent > a {
   section.projects article.projectCard:hover > figure > div.overlay {
     opacity: 0.9;
   }
+
+  section.projects > article.projectCard > div.cardContent {
+    grid-area: 1 / 1 / -1 / -1;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   section.projects > article.projectCard > div.cardContent > div {
     background-color: transparent;
     padding: 0px;
   }
-  section.projects > article.projectCard > div.cardContent {
-    grid-area: 1 / 1 / -1 / -1;
-    padding: 30px 0px;
-  }
 
-  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
-    grid-column: 1 / -1;
-    text-align: left;
-  }
   section.projects > article.projectCard > div.cardContent > ul {
     justify-content: start;
   }
@@ -298,11 +308,24 @@ section.projects > article.projectCard > div.cardContent > a {
     padding-left: 50px;
     padding-right: 70px;
   }
+  section.projects > article.projectCard {
+    padding: 0px;
+  }
   section.projects > article.projectCard > figure {
-    width: 100%;
-    height: 60%;
+    grid-area: 1 / 6 / -1 / -1;
+    /* border: 1px solid rgb(13, 174, 26); */
     position: relative;
-    top: 40%;
+    height: 80%;
+    top: 20%;
+  }
+  section.projects > article.projectCard > div.cardContent {
+    grid-area: 1 / 1 / -1 / 9;
+  }
+  section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
+    grid-column: 1/9;
+  }
+  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
+    grid-column: 4/-1;
   }
 }
 
@@ -312,11 +335,10 @@ section.projects > article.projectCard > div.cardContent > a {
     padding-left: 50px;
     padding-right: 70px;
   }
-  section.projects > article.projectCard > figure {
-    width: 100%;
-    height: 80%;
-    position: relative;
-    top: 20%;
+  section.projects > article.projectCard > div.cardContent > h4 {
+    color: var(--lightest-slate);
+    font-size: 23px;
+    line-height: 1.1;
   }
 }
 
@@ -327,7 +349,6 @@ section.projects > article.projectCard > div.cardContent > a {
     padding-right: 10%;
     padding-top: 5%;
   }
-
 }
 @media (min-width: 1541px) and (max-width: 2000px) {
   section.projects {
