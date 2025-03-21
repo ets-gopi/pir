@@ -1,200 +1,200 @@
 section.exp {
-  /* border: 1px solid rgb(209, 71, 12); */
-  width: 90%;
-  margin: auto;
-  padding: 30px 220px;
-  font-weight: var(--font-weight);
+    /* border: 1px solid rgb(209, 71, 12); */
+    width: 90%;
+    margin: auto;
+    padding: 30px 220px;
+    font-weight: var(--font-weight);
 }
 section.exp > header {
-  /* border: 1px solid rgb(209, 71, 12); */
-  display: flex;
-  font-weight: var(--font-weight);
-  position: relative;
+    /* border: 1px solid rgb(209, 71, 12); */
+    display: flex;
+    font-weight: var(--font-weight);
+    position: relative;
 }
 section.exp > header > h2 {
-  counter-increment: section-counter;
-  color: var(--lightest-slate);
-  position: relative;
-  font-size: clamp(26px, 2vw, var(--fz-heading));
+    counter-increment: section-counter;
+    color: var(--lightest-slate);
+    position: relative;
+    font-size: clamp(26px, 2vw, var(--fz-heading));
 }
 section.exp > header > h2::before {
-  content: "0" counter(section-counter) ".";
-  margin-right: 10px;
-  color: var(--green);
-  font-family: var(--font-secondary);
-  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
-  font-weight: 400;
+    content: '0' counter(section-counter) '.';
+    margin-right: 10px;
+    color: var(--green);
+    font-family: var(--font-secondary);
+    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+    font-weight: 400;
 }
 section.exp > header > div {
-  /* border: 1px solid rgb(209, 71, 12); */
-  flex-grow: 1;
-  padding-left: 10px;
+    /* border: 1px solid rgb(209, 71, 12); */
+    flex-grow: 1;
+    padding-left: 10px;
 }
 section.exp > header > div > div {
-  width: 70%;
-  height: 0.5px;
-  background-color: var(--slate);
-  position: relative;
-  top: 50%;
+    width: 70%;
+    height: 0.5px;
+    background-color: var(--slate);
+    position: relative;
+    top: 50%;
 }
 
 section.exp > #expContent {
-  /* border: 1px solid rgb(209, 71, 12); */
-  padding-left: 100px;
-  padding-top: 64px;
-  font-weight: 400;
-  position: relative;
+    /* border: 1px solid rgb(209, 71, 12); */
+    padding-left: 100px;
+    padding-top: 64px;
+    font-weight: 400;
+    position: relative;
 }
 section.exp > #expContent > span:first-child {
-  color: var(--lightest-slate);
-  font-size: var(--fz-xxl);
+    color: var(--lightest-slate);
+    font-size: var(--fz-xxl);
 }
 section.exp > #expContent > span:nth-child(2) {
-  color: var(--green);
-  transition: color 0.3s;
-  position: relative;
-  cursor: pointer;
-  font-size: var(--fz-xxl);
+    color: var(--green);
+    transition: color 0.3s;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--fz-xxl);
 }
 section.exp > #expContent > span:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  bottom: 0;
-  width: 0;
-  height: 0.5px;
-  background-color: var(--green);
-  transition: width 0.3s;
+    content: '';
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+    width: 0;
+    height: 0.5px;
+    background-color: var(--green);
+    transition: width 0.3s;
 }
 section.exp > #expContent > span:nth-child(2):hover::after {
-  width: 100%;
+    width: 100%;
 }
 section.exp > #expContent > p {
-  font-size: var(--fz-md);
+    font-size: var(--fz-md);
 }
 section.exp > #expContent > ul {
-  width: 90%;
-  list-style-type: none;
-  /* border: 1px solid rgb(209, 71, 12); */
-  margin: 15px 0px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: var(--fz-lg);
+    width: 90%;
+    list-style-type: none;
+    /* border: 1px solid rgb(209, 71, 12); */
+    margin: 15px 0px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: var(--fz-lg);
 }
 section.exp > #expContent > ul > li {
-  text-align: left;
-  line-height: 1.3;
+    text-align: left;
+    line-height: 1.3;
 }
 section.exp > #expContent > ul > li::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-bottom: 4px solid var(--green);
-  transform: rotate(90deg);
-  display: inline-block;
-  position: relative;
-  top: -4px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid var(--green);
+    transform: rotate(90deg);
+    display: inline-block;
+    position: relative;
+    top: -4px;
 }
 
 @media (max-width: 400px) {
-  section.exp {
-    /* border: 1px solid rgb(58, 186, 29); */
-    padding: 0px;
-  }
-  section.exp > header > div > div {
-    width: 100%;
-  }
-  section.exp > #expContent {
-    padding-left: 0px;
-    padding-top: 50px;
-  }
-  section.exp > #expContent > ul {
-    width: 100%;
-  }
-  section.exp > #expContent > span:nth-child(2) {
-    font-size: var(--fz-lg);
-  }
+    section.exp {
+        /* border: 1px solid rgb(58, 186, 29); */
+        padding: 0px;
+    }
+    section.exp > header > div > div {
+        width: 100%;
+    }
+    section.exp > #expContent {
+        padding-left: 0px;
+        padding-top: 50px;
+    }
+    section.exp > #expContent > ul {
+        width: 100%;
+    }
+    section.exp > #expContent > span:nth-child(2) {
+        font-size: var(--fz-lg);
+    }
 }
 
 @media (min-width: 400px) and (max-width: 576px) {
-  section.exp {
-    /* border: 1px solid rgb(58, 186, 29); */
-    padding: 0px;
-  }
-  section.exp > header > div > div {
-    width: 100%;
-  }
+    section.exp {
+        /* border: 1px solid rgb(58, 186, 29); */
+        padding: 0px;
+    }
+    section.exp > header > div > div {
+        width: 100%;
+    }
 
-  section.exp > #expContent {
-    padding-left: 0px;
-    padding-top: 64px;
-  }
-  section.exp > #expContent > ul {
-    width: 100%;
-  }
+    section.exp > #expContent {
+        padding-left: 0px;
+        padding-top: 64px;
+    }
+    section.exp > #expContent > ul {
+        width: 100%;
+    }
 }
 @media (min-width: 576px) and (max-width: 769px) {
-  section.exp {
-    /* border: 1px solid rgb(29, 186, 160); */
-    padding: 0px;
-  }
-  section.exp > header > div > div {
-    width: 100%;
-  }
+    section.exp {
+        /* border: 1px solid rgb(29, 186, 160); */
+        padding: 0px;
+    }
+    section.exp > header > div > div {
+        width: 100%;
+    }
 
-  section.exp > #expContent {
-    padding-left: 0px;
-    padding-top: 64px;
-  }
+    section.exp > #expContent {
+        padding-left: 0px;
+        padding-top: 64px;
+    }
 }
 @media (min-width: 769px) and (max-width: 991px) {
-  section.exp {
-    /* border: 1px solid rgb(224, 214, 17); */
-    padding-left: 180px;
-    padding-right: 70px;
-  }
-  section.exp > #expContent {
-    padding-left: 32px;
-    padding-top: 64px;
-  }
+    section.exp {
+        /* border: 1px solid rgb(224, 214, 17); */
+        padding-left: 180px;
+        padding-right: 70px;
+    }
+    section.exp > #expContent {
+        padding-left: 32px;
+        padding-top: 64px;
+    }
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
-  section.exp {
-    /* border: 1px solid rgb(45, 17, 224); */
-    padding-left: 220px;
-    padding-right: 70px;
-  }
-  section.exp > #expContent {
-    padding-left: 64px;
-    padding-top: 64px;
-  }
+    section.exp {
+        /* border: 1px solid rgb(45, 17, 224); */
+        padding-left: 220px;
+        padding-right: 70px;
+    }
+    section.exp > #expContent {
+        padding-left: 64px;
+        padding-top: 64px;
+    }
 }
 
 @media (min-width: 1281px) and (max-width: 1541px) {
-  section.exp {
-    /* border: 1px solid rgb(17, 224, 31); */
-    padding-left: 25%;
-    padding-right: 10%;
-    padding-top: 5%;
-  }
-  section.exp > #expContent > ul {
-    width: 80%;
-  }
+    section.exp {
+        /* border: 1px solid rgb(17, 224, 31); */
+        padding-left: 25%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
+    section.exp > #expContent > ul {
+        width: 80%;
+    }
 }
 
 @media (min-width: 1541px) and (max-width: 2000px) {
-  section.exp {
-    /* border: 1px solid rgb(226, 7, 18); */
-    padding-left: 30%;
-    padding-right: 15%;
-    padding-top: 10%;
-  }
-  section.exp > #expContent > ul {
-    width: 80%;
-  }
+    section.exp {
+        /* border: 1px solid rgb(226, 7, 18); */
+        padding-left: 30%;
+        padding-right: 15%;
+        padding-top: 10%;
+    }
+    section.exp > #expContent > ul {
+        width: 80%;
+    }
 }

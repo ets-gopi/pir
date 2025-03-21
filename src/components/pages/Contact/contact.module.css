@@ -1,106 +1,67 @@
 section.contact {
-  /* border: 1px solid rgb(16, 75, 224); */
-  width: 90%;
-  margin: 150px auto;
-  padding: 30px 100px;
+    /* border: 1px solid rgb(16, 75, 224); */
+    width: 90%;
+    margin: 150px auto;
 }
 section.contact > div:first-child {
-  position: relative;
-  /* border: 1px solid rgb(16, 75, 224); */
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  gap: 20px;
+    position: relative;
+    /* border: 1px solid rgb(16, 75, 224); */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 section.contact > div:first-child > header {
-  color: var(--color-text-highligth);
+    color: var(--color-text-highligth);
 }
 
 section.contact > div:first-child > h2 {
-  color: var(--color-text-secondary);
-  font-size: 40px;
+    color: var(--color-text-secondary);
+    font-size: 40px;
 }
 
 section.contact > div:first-child > p {
-  width: 50%;
-  line-height: 1.1;
-  /* border: 1px solid rgb(16, 75, 224); */
-  text-align: center;
+    width: 50%;
+    line-height: 1.1;
+    /* border: 1px solid rgb(16, 75, 224); */
+    text-align: center;
 }
 
 @media (max-width: 400px) {
-  section.contact {
-    /* border: 1px solid rgb(58, 186, 29); */
-    padding: 20px 20px;
-    width: 100%;
-  }
-  section.contact > div:first-child > p {
-    width: 98%;
-  }
+    section.contact > div:first-child > p {
+        width: 90%;
+    }
 }
 
 @media (min-width: 400px) and (max-width: 576px) {
-  section.contact {
-    /* border: 1px solid rgb(58, 186, 29); */
-    padding: 10px 10px;
-  }
-  section.contact > div:first-child > p {
-    width: 85%;
-  }
+    section.contact > div:first-child > p {
+        width: 90%;
+    }
 }
-@media (min-width: 576px) and (max-width: 767px) {
-  section.contact {
-    /* border: 1px solid rgb(29, 186, 160); */
-    padding: 30px 30px;
-  }
-  section.contact > div:first-child > p {
-    width: 71%;
-  }
+@media (min-width: 576px) and (max-width: 769px) {
+    section.contact > div:first-child > p {
+        width: 80%;
+    }
 }
-@media (min-width: 767px) and (max-width: 991px) {
-  section.contact {
-    /* border: 1px solid rgb(224, 214, 17); */
-    padding-left: 50px;
-    padding-right: 70px;
-  }
-  section.contact > div:first-child > p {
-    width: 65%;
-  }
+@media (min-width: 769px) and (max-width: 991px) {
+    section.contact > div:first-child > p {
+        width: 70%;
+    }
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
-  section.contact {
-    /* border: 1px solid rgb(224, 148, 17); */
-    padding-left: 50px;
-    padding-right: 70px;
-  }
-  section.contact > div:first-child > p {
-    width: 60%;
-  }
+    section.contact > div:first-child > p {
+        width: 60%;
+    }
 }
 
 /* 1536px, 1920px */
 @media (min-width: 1281px) and (max-width: 1541px) {
-  section.contact {
-    /* border: 1px solid rgb(247, 59, 17); */
-    padding-left: 15%;
-    padding-right: 10%;
-    padding-top: 5%;
-  }
-  section.contact > div:first-child > p {
-    width: 60%;
-  }
 }
 
 @media (min-width: 1541px) and (max-width: 2000px) {
-  section.contact {
-    /* border: 1px solid rgb(17, 224, 31); */
-    padding-left: 20%;
-    padding-right: 15%;
-    padding-top: 10%;
-  }
-  section.contact > div:first-child > p {
-    width: 60%;
-  }
+    section.contact > div:first-child > p {
+        width: 40%;
+    }
 }

@@ -1,311 +1,153 @@
 section.certificates {
-  /* border: 1px solid rgb(13, 174, 26); */
-  width: 90%;
-  margin: 100px auto;
-  padding: 30px 100px;
-  position: relative;
+    border: 1px solid rgb(13, 174, 26);
+    width: 90%;
+    margin: 100px auto;
+    padding: 30px 100px;
+    position: relative;
 }
 section.certificates > header {
-  /* border: 1px solid rgb(13, 174, 26); */
-  display: flex;
+    border: 1px solid rgb(13, 174, 26);
+    display: flex;
+    position: relative;
+    font-weight: var(--font-weight);
 }
 section.certificates > header > h2 {
-  counter-increment: section-counter;
-  font-family: var(--font-secondary);
-  font-weight: var(--font-weight);
-  color: var(--color-text-secondary);
-  font-size: 20px;
-  position: relative;
+    counter-increment: section-counter;
+    color: var(--lightest-slate);
+    position: relative;
+    font-size: clamp(26px, 2vw, var(--fz-heading));
 }
 section.certificates > header > h2::before {
-  content: "0" counter(section-counter) ".";
-  margin-right: 15px;
-  font-size: 18px;
-  color: var(--color-text-highligth);
+    content: '0' counter(section-counter) '.';
+    margin-right: 10px;
+    color: var(--green);
+    font-family: var(--font-secondary);
+    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+    font-weight: 400;
 }
 section.certificates > header > div {
-  /* border: 1px solid rgb(254, 9, 33); */
-  flex-grow: 1;
-  padding-left: 20px;
+    /* border: 1px solid rgb(254, 9, 33); */
+    flex-grow: 1;
+    padding-left: 10px;
 }
 section.certificates > header > div > div {
-  width: 50%;
-  height: 0.5px;
-  background-color: var(--color-text-primary);
-  position: relative;
-  top: 50%;
+    width: 50%;
+    height: 0.5px;
+    background-color: var(--slate);
+    position: relative;
+    top: 50%;
 }
 
 section.certificates > #certificatesContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  position: relative;
-  gap: 30px;
-  padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    position: relative;
+    gap: 30px;
+    padding: 50px 0px;
 }
 section.certificates > #certificatesContainer > div.certificatesItem {
-  /* border: 1px solid red; */
-  position: relative;
-  background-color: var(--light-navy);
+    /* border: 1px solid red; */
+    position: relative;
+    background-color: var(--light-navy);
 }
 section.certificates > #certificatesContainer > div.certificatesItem > a {
-  text-decoration: none;
-  cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
 }
-section.certificates
-  > #certificatesContainer
-  > div.certificatesItem
-  > a
-  > div.icon {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin-bottom: 45px;
+section.certificates > #certificatesContainer > div.certificatesItem > a > div.icon {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 45px;
 }
-section.certificates
-  > #certificatesContainer
-  > div.certificatesItem
-  > a
-  > div.icon
-  > img {
-  background-color: #0c2034;
+section.certificates > #certificatesContainer > div.certificatesItem > a > div.icon > img {
+    background-color: #0c2034;
 }
 
-section.certificates
-  > #certificatesContainer
-  > div.certificatesItem
-  > a
-  > div.icon
-  > div.corner {
-  /* border: 1px solid red; */
-  position: relative;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(45deg, var(--dark-navy) 50%, var(--navy) 50%);
+section.certificates > #certificatesContainer > div.certificatesItem > a > div.icon > div.corner {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--dark-navy) 50%, var(--navy) 50%);
 }
-section.certificates
-  > #certificatesContainer
-  > div.certificatesItem
-  > a
-  > div.content {
-  /* border: 1px solid red; */
-  position: relative;
+section.certificates > #certificatesContainer > div.certificatesItem > a > div.content {
+    /* border: 1px solid red; */
+    position: relative;
 }
-section.certificates
-  > #certificatesContainer
-  > div.certificatesItem
-  > a
-  > div.content
-  > div:nth-child(1) {
-  /* border: 1px solid red; */
-  position: relative;
-  padding-left: 2px;
-  color: var(--lightest-slate);
+section.certificates > #certificatesContainer > div.certificatesItem > a > div.content > div:nth-child(1) {
+    /* border: 1px solid red; */
+    position: relative;
+    padding-left: 2px;
+    color: var(--lightest-slate);
 }
-section.certificates
-  > #certificatesContainer
-  > div.certificatesItem
-  > a
-  > div.content
-  > div:nth-child(2) {
-  /* border: 1px solid red; */
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: self-end;
+section.certificates > #certificatesContainer > div.certificatesItem > a > div.content > div:nth-child(2) {
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: self-end;
 }
-section.certificates
-  > #certificatesContainer
-  > div.certificatesItem
-  > a
-  > div.content
-  > div:nth-child(2)
-  > span {
-  /* border: 1px solid red; */
-  position: relative;
-  top: -5px;
-  color: var(--lightest-slate);
-  padding-left: 2px;
+section.certificates > #certificatesContainer > div.certificatesItem > a > div.content > div:nth-child(2) > span {
+    /* border: 1px solid red; */
+    position: relative;
+    top: -5px;
+    color: var(--lightest-slate);
+    padding-left: 2px;
 }
 
 @media (max-width: 400px) {
-  section.projects {
-    /* border: 1px solid rgb(245, 11, 54); */
-    padding: 20px 20px;
-    width: 100%;
-  }
-  section.projects > header h2::before {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-
-  section.projects > header > h2 {
-    font-size: 18px;
-  }
-  section.projects > header > div {
-    padding-left: 10px;
-  }
-  section.projects > header > div > div {
-    width: 100%;
-  }
-  section.projects > article.projectCard {
-    padding: 0px;
-  }
-  section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
-    grid-column: 1/-1;
-  }
-  section.projects > article.projectCard > figure {
-    grid-area: 1 / 1 / -1 / -1;
-  }
-  section.projects > article.projectCard > figure > div.overlay {
-    background-color: #0c2034;
-    opacity: 0.9;
-  }
-  section.projects article.projectCard:hover > figure > div.overlay {
-    opacity: 0.9;
-  }
-  section.projects > article.projectCard > div.cardContent {
-    grid-area: 1 / 1 / -1 / -1;
-    padding: 10px 15px;
-  }
-
-  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
-    grid-column: 1/-1;
-    text-align: left;
-  }
-
-  section.projects > article.projectCard > div.cardContent > div {
-    background-color: transparent;
-    padding: 0px;
-  }
-  section.projects > article.projectCard > div.cardContent > ul {
-    justify-content: start;
-  }
+    section.certificates {
+        /* border: 1px solid rgb(245, 11, 54); */
+        padding: 0px;
+    }
+    section.certificates > header > div > div {
+        width: 100%;
+    }
 }
 @media (min-width: 400px) and (max-width: 576px) {
-  section.projects {
-    /* border: 1px solid rgb(214, 217, 16); */
-    padding: 10px 10px;
-  }
-  section.projects > header > div > div {
-    width: 100%;
-  }
-  section.projects > article.projectCard {
-    padding: 0px;
-  }
-
-  section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
-    grid-column: 1/-1;
-  }
-  section.projects > article.projectCard > figure {
-    grid-area: 1 / 1 / -1 / -1;
-  }
-  section.projects > article.projectCard > figure > div.overlay {
-    background-color: #0c2034;
-    opacity: 0.9;
-  }
-  section.projects article.projectCard:hover > figure > div.overlay {
-    opacity: 0.9;
-  }
-  section.projects > article.projectCard > div.cardContent {
-    grid-area: 1 / 1 / -1 / -1;
-    padding: 30px 0px;
-  }
-
-  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
-    grid-column: 1/-1;
-    text-align: left;
-  }
-
-  section.projects > article.projectCard > div.cardContent > div {
-    background-color: transparent;
-    padding: 0px;
-  }
-  section.projects > article.projectCard > div.cardContent > ul {
-    justify-content: start;
-  }
+    section.certificates {
+        /* border: 1px solid rgb(214, 217, 16); */
+        padding: 0px;
+    }
 }
-@media (min-width: 576px) and (max-width: 767px) {
-  section.projects {
-    /* border: 1px solid rgb(47, 14, 235); */
-    padding: 30px 30px;
-  }
-  section.projects > header > div > div {
-    width: 100%;
-  }
-  section.projects > article.projectCard:nth-of-type(2n + 1) > figure {
-    grid-column: 1/-1;
-  }
-  section.projects > article.projectCard > figure {
-    grid-area: 1 / 1 / -1 / -1;
-  }
-  section.projects > article.projectCard > figure > div.overlay {
-    background-color: #0c2034;
-    opacity: 0.9;
-  }
-  section.projects article.projectCard:hover > figure > div.overlay {
-    opacity: 0.9;
-  }
-  section.projects > article.projectCard > div.cardContent > div {
-    background-color: transparent;
-    padding: 0px;
-  }
-  section.projects > article.projectCard > div.cardContent {
-    grid-area: 1 / 1 / -1 / -1;
-    padding: 30px 0px;
-  }
-
-  section.projects > article.projectCard:nth-of-type(2n + 1) > div.cardContent {
-    grid-column: 1 / -1;
-    text-align: left;
-  }
-  section.projects > article.projectCard > div.cardContent > ul {
-    justify-content: start;
-  }
+@media (min-width: 576px) and (max-width: 769px) {
+    section.certificates {
+        /* border: 1px solid rgb(47, 14, 235); */
+        padding: 0px;
+    }
 }
-@media (min-width: 767px) and (max-width: 991px) {
-  section.projects {
-    /* border: 1px solid rgb(235, 14, 198); */
-    padding-left: 50px;
-    padding-right: 70px;
-  }
-  section.projects > article.projectCard > figure {
-    width: 100%;
-    height: 60%;
-    position: relative;
-    top: 40%;
-  }
+@media (min-width: 769px) and (max-width: 991px) {
+    section.certificates {
+        /* border: 1px solid rgb(235, 14, 198); */
+        padding-left: 50px;
+        padding-right: 70px;
+    }
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
-  section.projects {
-    /* border: 1px solid rgb(224, 58, 17); */
-    padding-left: 50px;
-    padding-right: 70px;
-  }
-  section.projects > article.projectCard > figure {
-    width: 100%;
-    height: 80%;
-    position: relative;
-    top: 20%;
-  }
+    section.certificates {
+        /* border: 1px solid rgb(224, 58, 17); */
+        padding-left: 50px;
+        padding-right: 70px;
+    }
 }
 
 @media (min-width: 1281px) and (max-width: 1541px) {
-  section.projects {
-    /* border: 1px solid rgb(45, 224, 17); */
-    padding-left: 15%;
-    padding-right: 10%;
-    padding-top: 5%;
-  }
+    section.certificates {
+        /* border: 1px solid rgb(45, 224, 17); */
+        padding-left: 15%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
 }
 @media (min-width: 1541px) and (max-width: 2000px) {
-  section.projects {
-    /* border: 1px solid rgb(224, 58, 17); */
-    padding-left: 20%;
-    padding-right: 15%;
-    padding-top: 10%;
-  }
+    section.certificates {
+        /* border: 1px solid rgb(224, 58, 17); */
+        padding-left: 20%;
+        padding-right: 15%;
+        padding-top: 10%;
+    }
 }

@@ -149,3 +149,38 @@
     transform: translateX(0px);
   }
 }
+
+/* Extra Small Phones (Very small devices like older Androids) */
+@media (max-width: 359px) {
+    /* Styles for very small devices */
+}
+
+/* Standard Mobile Phones (360px and above) */
+@media (min-width: 360px) and (max-width: 480px) {
+    /* Styles for typical smartphones */
+}
+
+/* Large Phones & Small Tablets (Galaxy Fold, iPhone 14 Pro Max) */
+@media (min-width: 481px) and (max-width: 575px) {
+    /* Styles for large phones and phablets */
+}
+
+/* Tablets & Small Laptops (iPads, Surface Go) */
+@media (min-width: 576px) and (max-width: 767px) {
+    /* Styles for small tablets */
+}
+
+/* Medium Tablets & Small Laptops (iPad Pro, Surface Laptop Go) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Styles for medium devices */
+}
+
+/* Large Laptops & Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for laptops and small desktops */
+}
+
+/* Extra Large Screens (Big Screens, 4K Monitors) */
+@media (min-width: 1200px) {
+    /* Styles for large desktops */
+}

@@ -1,62 +1,62 @@
 section.home {
-  /* border: 1px solid rgb(42, 230, 13); */
-  width: 90%;
-  margin: auto;
-  padding: 30px 100px;
-  position: relative;
+    /* border: 1px solid rgb(42, 230, 13); */
+    width: 90%;
+    margin: auto;
+    padding: 30px 100px;
+    position: relative;
 }
 section.home div {
-  /* border: 1px solid rgb(42, 230, 13); */
-  position: relative;
-  font-weight: var(--font-weight);
+    /* border: 1px solid rgb(42, 230, 13); */
+    position: relative;
+    font-weight: var(--font-weight);
 }
 section.home div:nth-child(1) > h1 {
-  color: var(--green);
-  font-family: var(--font-secondary);
-  margin: 0px 0px 30px 4px;
-  font-size: clamp(var(--fz-sm), 2vw, var(--fz-md));
-  font-weight: 400;
+    color: var(--green);
+    font-family: var(--font-secondary);
+    margin: 0px 0px 30px 4px;
+    font-size: clamp(var(--fz-sm), 2vw, var(--fz-md));
+    font-weight: 400;
 }
 
 section.home div:nth-child(2) > h2 {
-  margin: 0px;
-  font-size: clamp(40px, 8vw, 80px);
-  color: var(--lightest-slate);
-  line-height: 1.1;
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+    color: var(--lightest-slate);
+    line-height: 1.1;
 }
 section.home div:nth-child(3) > h3 {
-  margin: 0px;
-  font-size: clamp(40px, 8vw, 80px);
-  line-height: 0.9;
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+    line-height: 0.9;
 }
 section.home div:nth-child(4) {
-  margin: 40px 0px;
-  text-align: left;
-  font-weight: 400;
+    margin: 40px 0px;
+    text-align: left;
+    font-weight: 400;
 }
 section.home div:nth-child(4) > p {
-  width: 70%;
-  line-height: 1.1;
+    width: 70%;
+    line-height: 1.1;
 }
 section.home div:nth-child(4) > p > span {
-  color: var(--green);
-  transition: color 0.3s;
-  position: relative;
-  cursor: pointer;
+    color: var(--green);
+    transition: color 0.3s;
+    position: relative;
+    cursor: pointer;
 }
 
 section.home div:nth-child(4) > p > span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0.5px;
-  background-color: var(--green);
-  transition: width 0.3s;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.5px;
+    background-color: var(--green);
+    transition: width 0.3s;
 }
 section.home div:nth-child(4) > p > span:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 /* Device Type	Screen Width (px)
@@ -69,80 +69,79 @@ XXL Screens	1400px and above */
 /* CSS Media Queries for Responsiveness */
 
 @media (max-width: 400px) {
-  section.home {
-    /* border: 1px solid rgb(39, 18, 223); */
-    padding: 0px;
-    padding-top: 50px;
-  }
-  section.home div:nth-child(1) > h1 {
-    margin: 0;
-    margin-top: 100px;
-  }
-  section.home div:nth-child(2) > h2 {
-    margin: 0;
-    margin: 10px 0px;
-  }
-  section.home div:nth-child(4) > p {
-    width: 90%;
-    
-  }
+    section.home {
+        /* border: 1px solid rgb(39, 18, 223); */
+        padding: 0px;
+        padding-top: 50px;
+    }
+    section.home div:nth-child(1) > h1 {
+        margin: 0;
+        margin-top: 100px;
+    }
+    section.home div:nth-child(2) > h2 {
+        margin: 0;
+        margin: 10px 0px;
+    }
+    section.home div:nth-child(4) > p {
+        width: 90%;
+    }
 }
 @media (min-width: 400px) and (max-width: 576px) {
-  section.home {
-    /* border: 1px solid rgb(223, 18, 192); */
-    padding: 0px;
-    padding-top: 50px;
-  }
-  section.home div:nth-child(4) > p {
-    width: 85%;
-  }
+    section.home {
+        /* border: 1px solid rgb(223, 18, 192); */
+        padding: 0px;
+        padding-top: 50px;
+    }
+    section.home div:nth-child(4) > p {
+        width: 85%;
+    }
 }
 @media (min-width: 576px) and (max-width: 769px) {
-  section.home {
-    /* border: 1px solid rgb(25, 18, 223); */
-    padding: 0px;
-    padding-top: 125px;
-  }
-  section.home div:nth-child(4) > p {
-    width: 85%;
-  }
+    section.home {
+        /* border: 1px solid rgb(25, 18, 223); */
+        padding: 0px;
+        padding-top: 125px;
+    }
+    section.home div:nth-child(4) > p {
+        width: 85%;
+    }
 }
 @media (min-width: 769px) and (max-width: 991px) {
-  section.home {
-    /* border: 1px solid rgb(168, 223, 18); */
-    padding-left: 50px;
-    padding-right: 70px;
-  }
-  section.home div:nth-child(4) > p {
-    width: 100%;
-  }
+    section.home {
+        /* border: 1px solid rgb(168, 223, 18); */
+        padding-left: 50px;
+        padding-right: 70px;
+    }
+    section.home div:nth-child(4) > p {
+        width: 100%;
+    }
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
-  section.home {
-    /* border: 1px solid rgb(18, 223, 209); */
-    padding-left: 50px;
-    padding-right: 70px;
-  }
+    section.home {
+        /* border: 1px solid rgb(18, 223, 209); */
+        padding-left: 50px;
+        padding-right: 70px;
+    }
 
-  section.home div:nth-child(4) > p {
-    width: 90%;
-  }
+    section.home div:nth-child(4) > p {
+        width: 90%;
+    }
 }
 
 @media (min-width: 1281px) and (max-width: 1541px) {
-  section.home {
-    /* border: 1px solid rgb(196, 243, 9); */
-    padding-left: 15%;
-    padding-right: 10%;
-    padding-top: 5%;
-  }
+    section.home {
+        /* border: 1px solid rgb(196, 243, 9); */
+        padding-left: 15%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
 }
 @media (min-width: 1541px) and (max-width: 2000px) {
-  section.home {
-    /* border: 1px solid rgb(9, 243, 33); */
-    padding-left: 20%;
-    padding-right: 15%;
-    padding-top: 10%;
-  }
+    section.home {
+        /* border: 1px solid rgb(9, 243, 33); */
+        padding-left: 20%;
+        padding-right: 15%;
+        padding-top: 10%;
+    }
 }
