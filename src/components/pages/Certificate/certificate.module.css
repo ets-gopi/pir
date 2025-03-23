@@ -1,12 +1,12 @@
 section.certificates {
-    border: 1px solid rgb(13, 174, 26);
+    /* border: 1px solid rgb(13, 174, 26); */
     width: 90%;
     margin: 100px auto;
     padding: 30px 100px;
     position: relative;
 }
 section.certificates > header {
-    border: 1px solid rgb(13, 174, 26);
+    /* border: 1px solid rgb(13, 174, 26); */
     display: flex;
     position: relative;
     font-weight: var(--font-weight);
