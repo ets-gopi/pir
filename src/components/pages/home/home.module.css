@@ -5,12 +5,12 @@ section.home {
     padding: 30px 100px;
     position: relative;
 }
-section.home div {
+section.home > div {
     /* border: 1px solid rgb(42, 230, 13); */
     position: relative;
     font-weight: var(--font-weight);
 }
-section.home div:nth-child(1) > h1 {
+section.home > div:nth-child(1) > h1 {
     color: var(--green);
     font-family: var(--font-secondary);
     margin: 0px 0px 30px 4px;
@@ -18,34 +18,34 @@ section.home div:nth-child(1) > h1 {
     font-weight: 400;
 }
 
-section.home div:nth-child(2) > h2 {
+section.home > div:nth-child(2) > h2 {
     margin: 0px;
     font-size: clamp(40px, 8vw, 80px);
     color: var(--lightest-slate);
     line-height: 1.1;
 }
-section.home div:nth-child(3) > h3 {
+section.home > div:nth-child(3) > h3 {
     margin: 0px;
     font-size: clamp(40px, 8vw, 80px);
     line-height: 0.9;
 }
-section.home div:nth-child(4) {
+section.home > div:nth-child(4) {
     margin: 40px 0px;
     text-align: left;
     font-weight: 400;
 }
-section.home div:nth-child(4) > p {
+section.home > div:nth-child(4) > p {
     width: 70%;
     line-height: 1.1;
 }
-section.home div:nth-child(4) > p > span {
+section.home > div:nth-child(4) > p > span {
     color: var(--green);
     transition: color 0.3s;
     position: relative;
     cursor: pointer;
 }
 
-section.home div:nth-child(4) > p > span::after {
+section.home > div:nth-child(4) > p > span::after {
     content: '';
     position: absolute;
     left: 0;
@@ -55,7 +55,7 @@ section.home div:nth-child(4) > p > span::after {
     background-color: var(--green);
     transition: width 0.3s;
 }
-section.home div:nth-child(4) > p > span:hover::after {
+section.home > div:nth-child(4) > p > span:hover::after {
     width: 100%;
 }
 
@@ -145,3 +145,35 @@ XXL Screens	1400px and above */
         padding-top: 10%;
     }
 }
+
+/* 
+
+@media (max-width: 359px) {
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+    
+}
+
+
+@media (min-width: 481px) and (max-width: 575px) {
+    
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+   
+}
+
+@media (min-width: 1200px) {
+   
+} 
+*/

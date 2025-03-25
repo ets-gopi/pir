@@ -52,7 +52,7 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #sidebar2 {
         display: none;
     }
@@ -70,4 +70,3 @@
         display: none;
     }
 }
-

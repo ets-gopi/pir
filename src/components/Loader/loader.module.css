@@ -1,83 +1,83 @@
 /* Hexagon container */
 .hexagonContainer {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hexagonContainer.bg_color {
-  background-color: var(--dark-navy);
+    background-color: var(--dark-navy);
 }
 
 /* Stroke animation */
 .hexagon polygon {
-  fill: none;
-  stroke: #5bf0cf;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 420;
+    fill: none;
+    stroke: #5bf0cf;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 420;
 }
 /* Text styling */
 .hexagon text {
-  fill: #5bf0cf;
-  font-size: 25px;
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight);
-  dominant-baseline: middle;
+    fill: #5bf0cf;
+    font-size: 25px;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight);
+    dominant-baseline: middle;
 }
 .hexagon .letterG {
-  opacity: 0;
-  transform: translateX(30px);
-  animation: moveG 0.8s ease-out forwards;
-  animation-delay: 1.5s;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: moveG 0.8s ease-out forwards;
+    animation-delay: 1.5s;
 }
 
 .hexagon .letterD {
-  opacity: 0;
-  transform: translateX(-30px); /* Start off-screen left */
-  animation: moveD 0.8s ease-out forwards;
-  animation-delay: 1.5s; /* Starts after hexagon */
+    opacity: 0;
+    transform: translateX(-30px); /* Start off-screen left */
+    animation: moveD 0.8s ease-out forwards;
+    animation-delay: 1.5s; /* Starts after hexagon */
 }
 
 /* Border drawing animation */
 @keyframes drawBorder {
-  0% {
-    stroke-dashoffset: 420;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+    0% {
+        stroke-dashoffset: 420;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 /* "G" Animation */
 @keyframes moveG {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* "D" Animation */
 @keyframes moveD {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .addDrawBorderAnimation {
-  stroke-dashoffset: 420;
-  animation: drawBorder 2s ease-in-out forwards;
+    stroke-dashoffset: 420;
+    animation: drawBorder 2s ease-in-out forwards;
 }
 /* .addmoveGAnimation {
   animation: moveG 1s ease-in-out forwards;
@@ -86,10 +86,10 @@
   animation: moveD 1s ease-in-out forwards;
 } */
 .defaultSvgCSS {
-  width: 80px;
-  height: 80px;
+    width: 80px;
+    height: 80px;
 }
 .addSvgCustomCSS {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
