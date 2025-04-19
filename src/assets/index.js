@@ -5,6 +5,6 @@ import image2 from './g1Image.jpg';
 import hatimi from './luxury-bedroom.jpg';
 import hatimi1 from './hatimi1.png';
 import blockchain from './blockchain.jpg';
-import resume from './resumeWithPhoto.pdf';
+import resume from './defaultResume.pdf';
 import certificateIcon from './certificate.svg';
 export { logo, image, defaultLogo, image2, hatimi, blockchain, hatimi1, resume, certificateIcon };
